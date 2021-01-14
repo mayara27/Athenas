@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Help desk</title>
 
         <style type="text/css">
          	@charset "UTF-8";
@@ -22,7 +22,7 @@
     <body class="sb-nav-fixed">
         <h1>Inicio</h1>
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <a class="navbar-brand" href="index.html">Start Bootstrap</a>
+            <a class="navbar-brand" href="index.html">Athena's HelpDesk</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
@@ -38,10 +38,8 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#">Settings</a>
-                        <a class="dropdown-item" href="#">Activity Log</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="login.html">Logout</a>
+                        <a class="dropdown-item" href="login.html">Sair</a>
                     </div>
                 </li>
             </ul>
@@ -60,44 +58,32 @@
                             <div class="sb-sidenav-menu-heading">Interface</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Layouts
+                                Cadastro
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Static Navigation</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a>
+                                    <a class="nav-link" href="layout-static.html">Novo Cliente</a>
+                                    <a class="nav-link" href="layout-sidenav-light.html">Novo Funcionário</a>
                                 </nav>
                             </div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Pages
+                                 Chamado
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
                                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Authentication
+                                        Novo Chamado
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="login.html">Login</a>
-                                            <a class="nav-link" href="register.html">Register</a>
-                                            <a class="nav-link" href="password.html">Forgot Password</a>
-                                        </nav>
-                                    </div>
+                                    
                                     <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Error
+                                        Todos os Chamados
                                         <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                     </a>
-                                    <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
-                                        <nav class="sb-sidenav-menu-nested nav">
-                                            <a class="nav-link" href="401.html">401 Page</a>
-                                            <a class="nav-link" href="404.html">404 Page</a>
-                                            <a class="nav-link" href="500.html">500 Page</a>
-                                        </nav>
-                                    </div>
+                    
                                 </nav>
                             </div>
                             <div class="sb-sidenav-menu-heading">Addons</div>
@@ -112,11 +98,111 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        <div class="small">Desenvolvido por:</div>
+                        Diana e Mayara
                     </div>
                 </nav>
             </div>
+       
+
+        <div class="container mt-2 ml-15">
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col">
+                  
+                  <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="name">Nome Completo</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ex: Julia Fernandes">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4" placeholder="Ex: julia@gmail.com">
+                        </div>
+                        </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputAddress">Endereço</label>
+                            <input type="text" class="form-control" id="inputAddress" placeholder="Ex: Av. Bahia, 101, Poiares">
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="phone">Telefone</label>
+                            <input type="text" class="form-control" id="phone" placeholder="Ex:(12) 99212-0107 ">
+                        </div>
+                    </div>
+
+                        <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Gênero</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="setor">Setor</label>
+                            <select id="setor" class="form-control">
+                            <option>Recursos Humanos</option>
+                            <option>Atendimento</option>
+                            <option>Financeiro</option>
+                            <option>Desenvolvimento Web</option>
+                            <option>Fiscalização</option>
+                            <option>Marketing</option>
+                            <option>Secretaria</option>
+                            <option>Gerencia</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-md-2">
+                            <label for="id">Matrícula</label>
+                            <input type="text" class="form-control" id="id">
+                        </div>
+
+                        </div>
+
+                        <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="gridCheck">
+                            <label class="form-check-label" for="gridCheck">
+                            Possui Alguma Deficiência?
+                            </label>
+                        </div>
+                        </div>
+                        
+                        <div class="row mt-5">
+                        <div class="col-6">
+                            <a href="consultar_chamado.html" class="btn  btn-danger btn-block">Voltar</a>
+                        </div>
+
+                        <div class="col-6">
+                            <button class="btn btn-primary btn-block" type="">Abrir</button>
+                        </div>
+                        </div>
+
+                    </form>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             <div id="layoutSidenav_content">
               
                 <footer class="py-4 bg-light mt-auto">
