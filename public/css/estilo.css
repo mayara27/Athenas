@@ -302,11 +302,10 @@
   }
   
   fieldset {
-    min-width: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
+    border-color: rgba(110, 107, 107, 0.623);
+    border-radius: 10px;    
   }
+  
   
   legend {
     display: block;
@@ -314,10 +313,13 @@
     max-width: 100%;
     padding: 0;
     margin-bottom: 0.5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: inherit;
     color: inherit;
     white-space: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   progress {
