@@ -100,7 +100,86 @@
        
 
         <div class="container mt-2 ml-15">
-            
+          
+            <div class="card">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                  
+                            <form   action="{{ url('cliente') }}" method="POST" >
+                                @csrf
+                               <fieldset>
+                                    <legend > Informações Pesoais  </legend> <br><br>                                   
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="nome">Nome Completo</label>
+                                            <input type="text" class="form-control" id="nome_cliente" placeholder="Ex: Julia Fernandes">
+                                        </div>
+
+                                        <div class="form-group col-md-6">
+                                            <label for="cpf">CPF</label>
+                                            <input type="text" class="form-control" id="cpf_cliente" placeholder="Ex: 4623748738">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="setor">Setor</label>
+                                            <select id="setor" class="form-control">
+                                                <option>Recursos Humanos</option>
+                                                <option>Atendimento</option>
+                                                <option>Financeiro</option>
+                                                <option>Desenvolvimento Web</option>
+                                                <option>Fiscalização</option>
+                                                <option>Marketing</option>
+                                                <option>Secretaria</option>
+                                                <option>Gerencia</option>
+                                            </select>
+                                        </div>
+                                    
+                                        <div class="form-group col-md-6">
+                                            <label for="telefone_cliente">Telefone</label>
+                                            <input type="text" class="form-control" id="tel_cliente" >
+                                        </div>
+                                    </div>    
+                                    
+
+                                    <div class="form-row">
+                                        <div class="form-group col-md-12">
+                                            <label for="email_cliente">Email</label>
+                                            <input type="email" class="form-control" id="email_cliente" placeholder="Ex: julia@gmail.com">
+                                        </div>
+
+                                    </div>
+
+
+                                </fieldset><br><br>
+
+                                <div class="row mt-5">
+                                    <div class="col-6">
+                                        <a href="consultar_chamado.html" class="btn  btn-danger btn-block">Voltar</a>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <button class="btn btn-primary btn-block" type="">Abrir</button>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <small id="titulo" class="form-text text-muted" style="text-align: center;">
+                                    Nunca compartilharemos suas Informações com ninguém !
+                                </small>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
 
 
             <div id="layoutSidenav_content">

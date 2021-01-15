@@ -46,7 +46,6 @@
         </nav>
 
         <div id="layoutSidenav">
-
             <div id="layoutSidenav_nav">
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
@@ -64,29 +63,23 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="layout-static.html">Novo Cliente</a>
-                                    <a class="nav-link" href="layout-sidenav-light.html">Novo Funcionário</a>
+                                    <a class="nav-link" href="{{ url('/cliente/create')}}">Novo Cliente</a>
+                                    <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
                                 </nav>
                             </div>
+
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                 Chamado
+                                Chamado
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                             </a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">
-                                        Novo Chamado
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                                    
-                                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">
-                                        Todos os Chamados
-                                        <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                    </a>
-                    
+                                <nav class="sb-sidenav-menu-nested nav">
+                                    <a class="nav-link" href="{{ url('/chamado/create')}}">Novo Chamado</a>
+                                    <a class="nav-link" href="/">Todos Chamados</a>
                                 </nav>
                             </div>
+
                             <div class="sb-sidenav-menu-heading">Addons</div>
                             <a class="nav-link" href="charts.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
@@ -106,15 +99,15 @@
             </div>
        
 
-        
-        
         <div class="container mt-2 ml-15">
-
             <div class="card">
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <form>
+                            <form  action="{{ url('chamado') }}" method="POST" enctype="multipart/form-data">
+                                
+                                @csrf
+                                
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="titulo">Título Do chamado*</label>
@@ -165,22 +158,6 @@
                 </div>
             </div>
        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
