@@ -106,31 +106,34 @@
                     <div class="row">
                         <div class="col">
                   
-                            <form>
+                            <form action="{{url('usuario')}}" method="POST">
+                               
+                               @csrf
+
                                <fieldset>
                                     <legend > Informações Pesoais  </legend> <br><br>                                   
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="nome">Nome Completo</label>
-                                            <input type="text" class="form-control" id="nome" placeholder="Ex: Julia Fernandes">
+                                            <input type="text" class="form-control" name="nome" id="nome" placeholder="Ex: Julia Fernandes">
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="cpf">CPF</label>
-                                            <input type="text" class="form-control" id="cpf" placeholder="Ex: 4623748738">
+                                            <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738">
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="email">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Ex: julia@gmail.com">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Ex: julia@gmail.com">
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="nascimento">Data de Nascimento</label>
-                                            <input type="date" class="form-control" id="nascimento" >
+                                            <input type="date" class="form-control" name="nascimento" id="nascimento" >
                                         </div>
                                         
                                     </div>
@@ -138,12 +141,12 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="telefone">Telefone</label>
-                                            <input type="text" class="form-control" id="telefone" placeholder="Ex:(12) 99212-0107 ">
+                                            <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107 ">
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="telefone2">Telefone para Contato</label>
-                                            <input type="text" class="form-control" id="telefone2" placeholder="Ex:(12) 99212-0107 ">
+                                            <input type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107 ">
                                         </div>
                                     </div>
 
@@ -151,17 +154,17 @@
                                     <div class="form-row">                 
                                         <div class="form-group col-md-4">
                                                 <label for="estado_civil">Estado Civil</label>
-                                                <select id="estado_civil" class="form-control">
+                                                <select name="estado_civil" id="estado_civil" class="form-control">
                                                     <option>Casado(a)</option>
                                                     <option>Solteiro(a)</option>
                                                     <option>Divorciado(a)</option>
-                                                    <option>Viúvo(a)</option>
+                                                    <option>Viuvo(a)</option>
                                                 </select>                                        
                                         </div>
 
                                         <div class="form-group col-md-4">
                                             <label for="escolaridade">Escolaridade</label>
-                                            <select id="escolaridade" class="form-control">
+                                            <select name="escolaridade" id="escolaridade" class="form-control">
                                                     <option>--- --- --- -- --- --- --- --- --- --- --- ---</option>
                                                     <option>Analfabeto(a)</option>
                                                     <option>Fundamental Completo</option>
@@ -175,14 +178,14 @@
 
                                         <div class="form-group col-md-4">
                                             <label for="filhos">Número de Filhos</label>
-                                            <input type="number" class="form-control" id="filhos" >
+                                            <input type="number" class="form-control" name="filhos" id="filhos" >
                                         </div>                                    
                                     </div><br>
 
                                     <div class="form-row">
                                         <div class="form-group col-md-4">
                                             <label for="tipo_usuario">Nível de acesso
-                                            </label><select id="tipo_usuario" class="form-control">
+                                            </label><select name="tipo_usuario" id="tipo_usuario" class="form-control">
                                                 <option>Atendente</option>
                                                 <option>Supervisor</option>
                                                 <option>Suporte</option>
@@ -190,7 +193,7 @@
                                         </div>
                                         <div class="form-group col-md-4">
                                             <label for="setor">Setor</label>
-                                            <select id="setor" class="form-control">
+                                            <select name="setor" id="setor" class="form-control">
                                                 <option>Recursos Humanos</option>
                                                 <option>Atendimento</option>
                                                 <option>Financeiro</option>
@@ -204,7 +207,7 @@
 
                                         <div class="form-group col-md-4">
                                             <label for="id">Matrícula</label>
-                                            <input type="text" class="form-control" id="id">
+                                            <input type="text" class="form-control" name="id" id="id">
                                         </div>
 
                                     </div><br><br>
@@ -212,56 +215,53 @@
 
                                 <fieldset>
                                     <legend > Endereço  </legend><br><br>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="cep">CEP</label>
-                                            <input type="text" class="form-control" id="cep" placeholder="Ex: 11665420 ">
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="rua">Rua</label>
-                                            <input type="text" class="form-control" id="rua" placeholder="Ex: Rua Bahia">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <label for="numero">Número</label>
-                                            <input type="text" class="form-control" id="numero" placeholder="Ex: 116 ">
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="bairro">Bairro</label>
-                                            <input type="text" class="form-control" id="bairro" placeholder="Ex: Tamandaré">
-                                        </div>
-                                    </div>                                     
-
-                                    <div class="form-row">                            
-                                        <div class="form-group col-md-6">
-                                            <label for="cidade">Cidade</label>
-                                            <input type="text" class="form-control" id="cidade" placeholder="Ex: Guarátinguetá ">
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="estado">Estado</label>
-                                            <input type="text" class="form-control" id="estado" placeholder="Ex: São Paulo ">
-                                        </div>
                                         
-                                    </div><br><br>
-                        
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="cep">CEP</label>
+                                                <input type="text" class="form-control" name="cep" id="cep" placeholder="Ex: 11665420 ">
+                                            </div>
+
+                                            <div class="form-group col-md-6">
+                                                <label for="rua">Rua</label>
+                                                <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6">
+                                                <label for="numero">Número</label>
+                                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
+                                            </div>
+
+                                            <div class="form-group col-md-6">
+                                                <label for="bairro">Bairro</label>
+                                                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
+                                            </div>
+                                        </div>                                     
+
+                                        <div class="form-row">                            
+                                            <div class="form-group col-md-6">
+                                                <label for="cidade">Cidade</label>
+                                                <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
+                                            </div>
+
+                                            <div class="form-group col-md-6">
+                                                <label for="estado">Estado</label>
+                                                <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: São Paulo ">
+                                            </div>
+                                            
+                                        </div><br><br>
                                 </fieldset>
                                     
                                 <div class="row mt-5">
-                                    <div class="col-6">
-                                        <a href="consultar_chamado.html" class="btn  btn-danger btn-block">Voltar</a>
-                                    </div>
 
-                                    <div class="col-6">
-                                        <button class="btn btn-primary btn-block" type="">Abrir</button>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
                                     </div>
                                 </div>
                                 <br><br>
+
                                 <small id="titulo" class="form-text text-muted" style="text-align: center;">
                                     Nunca compartilharemos suas Informações com ninguém !
                                 </small>

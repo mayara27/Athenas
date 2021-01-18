@@ -114,19 +114,19 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="nome">Nome Completo</label>
-                                            <input type="text" class="form-control" id="nome_cliente" placeholder="Ex: Julia Fernandes">
+                                            <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="cpf">CPF</label>
-                                            <input type="text" class="form-control" id="cpf_cliente" placeholder="Ex: 4623748738">
+                                            <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
                                         </div>
                                     </div>
 
                                     <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="setor">Setor</label>
-                                            <select id="setor" class="form-control">
+                                            <select name="setor" id="setor" class="form-control">
                                                 <option>Recursos Humanos</option>
                                                 <option>Atendimento</option>
                                                 <option>Financeiro</option>
@@ -140,7 +140,7 @@
                                     
                                         <div class="form-group col-md-6">
                                             <label for="telefone_cliente">Telefone</label>
-                                            <input type="text" class="form-control" id="tel_cliente" >
+                                            <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" >
                                         </div>
                                     </div>    
                                     
@@ -148,21 +148,15 @@
                                     <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <label for="email_cliente">Email</label>
-                                            <input type="email" class="form-control" id="email_cliente" placeholder="Ex: julia@gmail.com">
+                                            <input type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
                                         </div>
-
                                     </div>
-
 
                                 </fieldset><br><br>
 
                                 <div class="row mt-5">
                                     <div class="col-6">
-                                        <a href="consultar_chamado.html" class="btn  btn-danger btn-block">Voltar</a>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <button class="btn btn-primary btn-block" type="">Abrir</button>
+                                        <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                                     </div>
                                 </div>
                                 <br><br>
