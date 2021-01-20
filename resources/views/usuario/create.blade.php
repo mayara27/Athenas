@@ -165,7 +165,7 @@
                                         <div class="form-group col-md-4">
                                             <label for="escolaridade">Escolaridade</label>
                                             <select name="escolaridade" id="escolaridade" class="form-control">
-                                                    <option>--- --- --- -- --- --- --- --- --- --- --- ---</option>
+                                                
                                                     <option>Analfabeto(a)</option>
                                                     <option>Fundamental Completo</option>
                                                     <option>Fundamental Incompleto</option>
@@ -206,8 +206,8 @@
                                         </div>
 
                                         <div class="form-group col-md-4">
-                                            <label for="id">Matrícula</label>
-                                            <input type="text" class="form-control" name="id" id="id">
+                                            <label for="emaillogin">Nome para email</label>
+                                            <input type="text" class="form-control" name="emaillogin" id="emaillogin" placeholder="marciarhlocaweb">
                                         </div>
 
                                     </div><br><br>

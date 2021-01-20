@@ -152,10 +152,51 @@
                                         </div>
                                     </div>
 
-                                </fieldset><br><br>
+                                    </fieldset><br><br>
+
+                                    <fieldset>
+                                        <legend > Endereço  </legend><br><br>
+                                            
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="cep">CEP</label>
+                                                    <input type="text" class="form-control" name="cep" id="cep" placeholder="Ex: 11665420 ">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="rua">Rua</label>
+                                                    <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="numero">Número</label>
+                                                    <input type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="bairro">Bairro</label>
+                                                    <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
+                                                </div>
+                                            </div>                                     
+
+                                            <div class="form-row">                            
+                                                <div class="form-group col-md-6">
+                                                    <label for="cidade">Cidade</label>
+                                                    <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="estado">Estado</label>
+                                                    <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: São Paulo ">
+                                                </div>
+                                                
+                                            </div><br><br>
+                                    </fieldset>
 
                                 <div class="row mt-5">
-                                    <div class="col-6">
+                                    <div class="col-12">
                                         <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
                                     </div>
                                 </div>
