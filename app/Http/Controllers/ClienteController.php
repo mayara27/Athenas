@@ -17,11 +17,11 @@ class ClienteController extends Controller
     {
         $cliente = new Cliente;
 
-        $cliente->nome_cliente = $request->nome;
-        $cliente->cpf = $request->cpf;
-        $cliente->email = $request->email;
+        $cliente->nome_cliente = $request->nome_cliente;
+        $cliente->cpf = $request->cpf_cliente;
+        $cliente->email = $request->email_cliente;
         $cliente->setor = $request->setor;
-        $cliente->telefone = $request->telefone;
+        $cliente->telefone = $request->tel_cliente;
 
         $cliente->save();
 
