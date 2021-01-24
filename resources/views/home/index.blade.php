@@ -100,23 +100,25 @@
        
 
         <div class="container mt-2 ml-15">
-            
-
-
             <div id="layoutSidenav_content">
-              
-                <footer class="py-4 bg-light mt-auto">
+                <main>
                     <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+              
+                        <footer class="py-4 bg-light mt-auto">
+                            <div class="container-fluid">
+                                <div class="d-flex align-items-center justify-content-between small">
+                                    <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                                    <div>
+                                        <a href="#">Privacy Policy</a>
+                                        &middot;
+                                        <a href="#">Terms &amp; Conditions</a>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+                        </footer>
+                
                     </div>
-                </footer>
+                </main>
             </div>
         </div>
 
