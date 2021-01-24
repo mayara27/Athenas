@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Cliente;
-use App\Endereco;
+use App\EnderecoCliente;
 
 class ClienteController extends Controller
 {
@@ -25,7 +25,7 @@ class ClienteController extends Controller
 
         $cliente->save();
 
-        $endereco = new Endereco;
+        $endereco = new EnderecoCliente;
 
         $endereco->rua = $request->rua;
         $endereco->num = $request->numero;
@@ -33,7 +33,7 @@ class ClienteController extends Controller
         $endereco->cep = $request->cep;
         $endereco->cidade = $request->cidade;
         $endereco->estado = $request->estado;
-        $endereco->id_usuario = $cliente->id;
+        $endereco->id_cliente = $cliente->id;
   
         
         $endereco->save();
