@@ -49,7 +49,10 @@ class UsuarioController extends Controller
         $endereco->save();
 
         return redirect()->to('/');
-        
-        
+    }
+
+    public function show(){
+        $usuarios = Usuario::all();
+        return view('usuario.show', compact('usuarios'));
     }
 }

@@ -114,115 +114,29 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <div class="card">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col">
-                            
-                                        <form   action="{{ url('cliente') }}" method="POST" >
-                                            @csrf
-                                        <fieldset>
-                                                <legend > Informações Pesoais  </legend> <br><br>                                   
-
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="nome">Nome Completo</label>
-                                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
-                                                    </div>
-
-                                                    <div class="form-group col-md-6">
-                                                        <label for="cpf">CPF</label>
-                                                        <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
-                                                    </div>
-                                                </div>
-
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-6">
-                                                        <label for="setor">Setor</label>
-                                                        <select name="setor" id="setor" class="form-control">
-                                                            <option>Recursos Humanos</option>
-                                                            <option>Atendimento</option>
-                                                            <option>Financeiro</option>
-                                                            <option>Desenvolvimento Web</option>
-                                                            <option>Fiscalização</option>
-                                                            <option>Marketing</option>
-                                                            <option>Secretaria</option>
-                                                            <option>Gerencia</option>
-                                                        </select>
-                                                    </div>
-                                                
-                                                    <div class="form-group col-md-6">
-                                                        <label for="telefone_cliente">Telefone</label>
-                                                        <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" >
-                                                    </div>
-                                                </div>    
-                                                
-
-                                                <div class="form-row">
-                                                    <div class="form-group col-md-12">
-                                                        <label for="email_cliente">Email</label>
-                                                        <input type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
-                                                    </div>
-                                                </div>
-
-                                                </fieldset><br><br>
-
-                                                <fieldset>
-                                                    <legend > Endereço  </legend><br><br>
-                                                        
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="cep">CEP</label>
-                                                                <input type="text" class="form-control" name="cep" id="cep" placeholder="Ex: 11665420 ">
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="rua">Rua</label>
-                                                                <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="form-row">
-                                                            <div class="form-group col-md-6">
-                                                                <label for="numero">Número</label>
-                                                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="bairro">Bairro</label>
-                                                                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
-                                                            </div>
-                                                        </div>                                     
-
-                                                        <div class="form-row">                            
-                                                            <div class="form-group col-md-6">
-                                                                <label for="cidade">Cidade</label>
-                                                                <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
-                                                            </div>
-
-                                                            <div class="form-group col-md-6">
-                                                                <label for="estado">Estado</label>
-                                                                <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: São Paulo ">
-                                                            </div>
-                                                            
-                                                        </div><br><br>
-                                                </fieldset>
-
-                                            <div class="row mt-5">
-                                                <div class="col-12">
-                                                    <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
-                                                </div>
-                                            </div>
-                                            <br><br>
-                                            <small id="titulo" class="form-text text-muted" style="text-align: center;">
-                                                Nunca compartilharemos suas Informações com ninguém !
-                                            </small>
-
-                                        </form>
-                                    </div>
-                                </div>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Matrícula</th>
+                            <th scope="col">Setor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div class="form-group col-md-6">
+                                @foreach ($clientes as $cliente)
+                                <tr>
+                                <td>{{ $cliente->nome_cliente }}</td>
+                                <td>{{ $cliente->id_cliente }}</td>
+                                <td>{{ $cliente->setor }}</td>
+                                </tr>
+                                @endforeach
                             </div>
-                        </div>
+                            <tr>
+                            
+                            </tr>
+                        </tbody>
+                        </table>
 
                     <div id="layoutSidenav_content">
               

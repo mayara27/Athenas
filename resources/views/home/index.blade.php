@@ -88,7 +88,7 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ url('/chamado/create')}}">Novo Chamado</a>
-                                    <a class="nav-link" href="/">Todos Chamados</a>
+                                    <a class="nav-link" href="{{ url('/chamado/show')}}">Todos Chamados</a>
                                 </nav>
                             </div>
 

@@ -76,7 +76,7 @@
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
                                     <a class="nav-link" href="{{ url('/chamado/create')}}">Novo Chamado</a>
-                                    <a class="nav-link" href="/">Todos Chamados</a>
+                                    <a class="nav-link" href="{{ url('/chamado/show')}}">Todos Chamados</a>
                                 </nav>
                             </div>
 
@@ -125,7 +125,6 @@
                                         <label for="deadline">Deadline</label>
                                         <input type="date" class="form-control" name="deadline" ></input>
                                     </div>
-
                                 </div>
 
                                 <div class="form-row">
@@ -151,14 +150,11 @@
                                         <button class="btn btn-primary btn-block" type="">Abrir</button>
                                     </div>
                                 </div>
-
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
-       
-
 
 
             <div id="layoutSidenav_content">

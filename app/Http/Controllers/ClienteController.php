@@ -41,4 +41,9 @@ class ClienteController extends Controller
         return redirect()->to('/');
     }
 
+    public function show(){
+        $clientes = Cliente::all();
+        return view('cliente.show', compact('clientes'));
+    }
+
 }
