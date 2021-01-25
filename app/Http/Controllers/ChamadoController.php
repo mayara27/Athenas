@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Chamado;
 use Illuminate\Http\Request;
 
 class ChamadoController extends Controller
@@ -13,7 +13,15 @@ class ChamadoController extends Controller
 
     public function store(Request $request)
     {
-        return $request;
+        $chamado = new Chamado;
+
+        $chamado->titulo = $request->titulo;
+        $chamado->status = 'ativo';
+        $chamado->prioridade = $request->prioridade;
+        $chamado->descrição = $request->descricao;
+        $chamado->id_cliente = $request->idcliente;
+
+        $chamado->save();
     }
 
 }

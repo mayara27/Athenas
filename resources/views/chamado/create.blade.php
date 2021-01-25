@@ -111,19 +111,19 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="titulo">Título Do chamado*</label>
-                                        <input type="text" class="form-control" id="titulo" placeholder="Ex: Correção erro 404">
+                                        <input type="text" class="form-control" name="titulo" placeholder="Ex: Correção erro 404">
                                     </div>
                                 </div>
                                 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
                                         <label for="idcliente">Mátricula do cliente</label>
-                                        <input type="text" class="form-control" id="idcliente" placeholder="Ex: 12314">
+                                        <input type="text" class="form-control" name="idcliente" placeholder="Ex: 12314">
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label for="deadline">Deadline</label>
-                                        <input type="date" class="form-control" id="deadline" ></input>
+                                        <input type="date" class="form-control" name="deadline" ></input>
                                     </div>
 
                                 </div>
@@ -131,14 +131,14 @@
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                             <label for="prioridade">Prioridade</label>
-                                            <input type="range" class="form-control-range" id="prioridade">
+                                            <input type="range" class="form-control-range" name="prioridade">
                                     </div>
                                 </div>
 
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
                                         <label for="descricao">Descrição</label>
-                                        <textarea type="textarea" class="form-control" id="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
+                                        <textarea type="textarea" class="form-control" name="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
                                     </div>        
                                 </div>
 

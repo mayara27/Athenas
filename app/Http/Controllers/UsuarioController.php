@@ -14,8 +14,6 @@ class UsuarioController extends Controller
     	return view('usuario.create');
     }
 
-     
-
     public function store(Request $request)
     { 
         $senha = 'user123';
