@@ -117,25 +117,33 @@
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Matrícula</th>
-                                <th scope="col">Setor</th>
+                            <th scope="col">ID</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Status</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Data de entrega</th>
                             </tr>
                         </thead>
-                            <tbody>
-                                <div class="form-group col-md-6">
-                                    @foreach ($clientes as $cliente)
-                                    <tr>
-                                        <td>{{ $cliente->nome_cliente }}</td>
-                                        <td>{{ $cliente->id_cliente }}</td>
-                                        <td>{{ $cliente->setor }}</td>
-                                    </tr>
-                                    @endforeach
-                                </div>
-                            </tbody>
+                        <tbody>
+                            <div class="form-group col-md-6">
+                                @foreach ($chamados as $chamado)
+                                <tr>
+                                    <td>{{ $chamado->id_chamado }}</td>
+                                    <td>{{ $chamado->titulo }}</td>
+                                    <td>{{ $chamado->status }}</td>
+                                    <td>{{ $chamado->descricao }}</td>
+                                    <td>{{ $chamado->deadline }}</td>
+                                </tr>
+                                @endforeach
+                            </div>
+                            <tr>
+                            
+                            </tr>
+                        </tbody>
                         </table>
 
                     <div id="layoutSidenav_content">
+              
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
