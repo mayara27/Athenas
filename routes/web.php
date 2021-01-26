@@ -11,9 +11,13 @@ Route::post('chamado/', 'ChamadoController@store');
 Route::get('usuario/show', 'UsuarioController@show')->name('usuario.show');
 Route::get('usuario/create', 'UsuarioController@create')->name('usuario.create');
 Route::post('usuario', 'UsuarioController@store');
+Route::delete('usuario/destroy/{id}', 'UsuarioController@destroy')->name('usuario.destroy');
+
 
 Route::get('cliente/show', 'ClienteController@show')->name('cliente.show');
 Route::get('cliente/create', 'ClienteController@create')->name('cliente.create');
 Route::post('cliente', 'ClienteController@store');
+Route::delete('cliente/destroy/{id}', 'ClienteController@destroy')->name('cliente.destroy');
+
 
 

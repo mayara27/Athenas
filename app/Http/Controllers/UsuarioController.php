@@ -55,4 +55,11 @@ class UsuarioController extends Controller
         $usuarios = Usuario::all();
         return view('usuario.show', compact('usuarios'));
     }
+
+    public function destroy($id)
+    {
+        $usuario = Usuario::findOrFail($id);
+        $usuario->delete();
+        return redirect('/')->with('success', 'Dados de Usuário removidos com sucesso!');
+    }
 }

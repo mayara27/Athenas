@@ -121,6 +121,7 @@
                             <th scope="col">Nome</th>
                             <th scope="col">Cargo</th>
                             <th scope="col">Telefone</th>
+                            <th scope="col">Excluir?</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -131,6 +132,14 @@
                                 <td>{{ $usuario->nome_usuario }}</td>
                                 <td>{{ $usuario->cargo }} ( {{ $usuario->nivel_acesso }} )</td>
                                 <td>{{ $usuario->telefone }}</td>
+                                <td>
+                                    <form action="{{ route('usuario.destroy', $usuario->id_usuario)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger btn-sm" type="submit">Excluir Usuário</button>
+                                    </form>
+                                </td>
+
                                 </tr>
                                 @endforeach
                             </div>

@@ -120,6 +120,7 @@
                                 <th scope="col">Nome</th>
                                 <th scope="col">Matrícula</th>
                                 <th scope="col">Setor</th>
+                                <th scope="col">Excluir?</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -129,7 +130,15 @@
                                         <td>{{ $cliente->nome_cliente }}</td>
                                         <td>{{ $cliente->id_cliente }}</td>
                                         <td>{{ $cliente->setor }}</td>
+                                        <td>
+                                            <form action="{{ route('cliente.destroy', $cliente->id_cliente)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-danger btn-sm" type="submit">Excluir Cliente</button>
+                                            </form>
+                                        </td>
                                     </tr>
+                                    
                                     @endforeach
                                 </div>
                             </tbody>
