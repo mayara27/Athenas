@@ -114,9 +114,6 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                   
-
-                    <div id="layoutSidenav_content">
               
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">

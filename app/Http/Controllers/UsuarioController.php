@@ -58,8 +58,13 @@ class UsuarioController extends Controller
 
     public function destroy($id)
     {
+      
+        $endereco = Endereco::where('id_usuario',$id);
+        $endereco->delete();
+
         $usuario = Usuario::findOrFail($id);
         $usuario->delete();
-        return redirect('/')->with('success', 'Dados de Usuário removidos com sucesso!');
+
+        return redirect('/')->with('success', 'Dados de Cliente removido com sucesso!');
     }
 }

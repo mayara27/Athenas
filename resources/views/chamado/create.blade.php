@@ -100,80 +100,84 @@
        
 
         <div class="container mt-2 ml-15">
-            <div class="card">
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col">
-                            <form  action="{{ url('chamado') }}" method="POST" enctype="multipart/form-data">
-                                
-                                @csrf
-                                
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="titulo">Título Do chamado*</label>
-                                        <input type="text" class="form-control" name="titulo" placeholder="Ex: Correção erro 404">
-                                    </div>
-                                </div>
-                                
-                                <div class="form-row">
-                                    <div class="form-group col-md-6">
-                                        <label for="id_cliente">Mátricula do cliente</label>
-                                        <input type="text" class="form-control" name="id_cliente" placeholder="Ex: 12314">
-                                    </div>
-
-                                    <div class="form-group col-md-6">
-                                        <label for="deadline">Deadline</label>
-                                        <input type="date" class="form-control" name="deadline">
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                            <label for="prioridade">Prioridade</label>
-                                            <input type="range" class="form-control-range" name="prioridade">
-                                    </div>
-                                </div>
-
-                                <div class="form-row">
-                                    <div class="form-group col-md-12">
-                                        <label for="descricao">Descrição</label>
-                                        <textarea type="textarea" class="form-control" name="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
-                                    </div>        
-                                </div>
-
-                                <div class="row mt-5">
-                                    <div class="col-6">
-                                        <a href="consultar_chamado.html" class="btn  btn-danger btn-block">Voltar</a>
-                                    </div>
-
-                                    <div class="col-6">
-                                        <button class="btn btn-primary btn-block" type="">Abrir</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
             <div id="layoutSidenav_content">
-              
-                <footer class="py-4 bg-light mt-auto">
+                <main>
                     <div class="container-fluid">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2020</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                                        <form  action="{{ url('chamado') }}" method="POST" enctype="multipart/form-data">
+                                            
+                                            @csrf
+                                            
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="titulo">Título Do chamado*</label>
+                                                    <input type="text" class="form-control" name="titulo" placeholder="Ex: Correção erro 404">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="id_cliente">Mátricula do cliente</label>
+                                                    <input type="text" class="form-control" name="id_cliente" placeholder="Ex: 12314">
+                                                </div>
+
+                                                <div class="form-group col-md-6">
+                                                    <label for="deadline">Deadline</label>
+                                                    <input type="date" class="form-control" name="deadline">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                        <label for="prioridade">Prioridade</label>
+                                                        <input type="range" class="form-control-range" name="prioridade">
+                                                </div>
+                                            </div>
+
+                                            <div class="form-row">
+                                                <div class="form-group col-md-12">
+                                                    <label for="descricao">Descrição</label>
+                                                    <textarea type="textarea" class="form-control" name="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
+                                                </div>        
+                                            </div>
+
+                                            <div class="row mt-5">
+                                                <div class="col-6">
+                                                    <a href="consultar_chamado.html" class="btn  btn-danger btn-block">Voltar</a>
+                                                </div>
+
+                                                <div class="col-6">
+                                                    <button class="btn btn-primary btn-block" type="">Abrir</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
                             </div>
                         </div>
+
+
+                        
+                            <footer class="py-4 bg-light mt-auto">
+                                <div class="container-fluid">
+                                    <div class="d-flex align-items-center justify-content-between small">
+                                        <div class="text-muted">Copyright &copy; Your Website 2020</div>
+                                        <div>
+                                            <a href="#">Privacy Policy</a>
+                                            &middot;
+                                            <a href="#">Terms &amp; Conditions</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </footer>
+                        </div>
                     </div>
-                </footer>
+                </main>
             </div>
         </div>
-
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
         <script src="js/scripts.js"></script>
