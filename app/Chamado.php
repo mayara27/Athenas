@@ -5,7 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chamado extends Model
 {
-    //
+    protected $primaryKey = 'id_chamado';
     public $timestamps = false;
     protected $fillable = [    
         

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Cliente;
 use App\EnderecoCliente;
-
+use App\Chamado;
 class ClienteController extends Controller
 {
     public function create()
@@ -48,8 +48,15 @@ class ClienteController extends Controller
 
     public function destroy($id)
     {
+        $chamado = Chamado::where('id_cliente',$id);
+        $chamado->delete();
+
+        $endereco = EnderecoCliente::where('id_cliente',$id);
+        $endereco->delete();
+
         $cliente = Cliente::findOrFail($id);
         $cliente->delete();
+
         return redirect('/')->with('success', 'Dados de Cliente removido com sucesso!');
     }
 

@@ -117,13 +117,13 @@
                                 
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <label for="idcliente">Mátricula do cliente</label>
-                                        <input type="text" class="form-control" name="idcliente" placeholder="Ex: 12314">
+                                        <label for="id_cliente">Mátricula do cliente</label>
+                                        <input type="text" class="form-control" name="id_cliente" placeholder="Ex: 12314">
                                     </div>
 
                                     <div class="form-group col-md-6">
                                         <label for="deadline">Deadline</label>
-                                        <input type="date" class="form-control" name="deadline" ></input>
+                                        <input type="date" class="form-control" name="deadline">
                                     </div>
                                 </div>
 

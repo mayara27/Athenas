@@ -10,12 +10,10 @@ class Cliente extends Model
 
     public $timestamps = false;
     protected $fillable = [    
-        
         'nome',
         'cpf',
         'setor',
         'telefone',
         'email'
-
     ];
 }

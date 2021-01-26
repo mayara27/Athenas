@@ -19,13 +19,10 @@ class ChamadoController extends Controller
         $chamado->status = 'ativo';
         $chamado->prioridade = $request->prioridade;
         $chamado->descricao = $request->descricao;
-        $chamado->id_cliente = $request->idcliente;
+        $chamado->id_cliente = $request->id_cliente;
 
         $chamado->save();
     }
 
-    public function show(){
-        $chamados = Chamado::all();
-        return view('chamado.show', compact('chamados'));
-    }
+    
 }

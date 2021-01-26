@@ -114,33 +114,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">ID</th>
-                            <th scope="col">Título</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Descrição</th>
-                            <th scope="col">Data de entrega</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <div class="form-group col-md-6">
-                                @foreach ($chamados as $chamado)
-                                <tr>
-                                    <td>{{ $chamado->id_chamado }}</td>
-                                    <td>{{ $chamado->titulo }}</td>
-                                    <td>{{ $chamado->status }}</td>
-                                    <td>{{ $chamado->descricao }}</td>
-                                    <td>{{ $chamado->deadline }}</td>
-                                </tr>
-                                @endforeach
-                            </div>
-                            <tr>
-                            
-                            </tr>
-                        </tbody>
-                        </table>
+                   
 
                     <div id="layoutSidenav_content">
               
