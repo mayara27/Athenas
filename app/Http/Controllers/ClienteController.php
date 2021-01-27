@@ -54,10 +54,10 @@ class ClienteController extends Controller
         $endereco = EnderecoCliente::where('id_cliente',$id);
         $endereco->delete();
 
-        $cliente = Cliente::findOrFail($id);
+        $cliente = Cliente::where('id_cliente',$id);
         $cliente->delete();
 
-        return redirect('/')->with('success', 'Dados de Cliente removido com sucesso!');
+        return redirect('cliente/show')->with('success', 'Dados de Cliente removido com sucesso!');
     }
 
 }

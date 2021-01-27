@@ -62,10 +62,10 @@ class UsuarioController extends Controller
         $endereco = Endereco::where('id_usuario',$id);
         $endereco->delete();
 
-        $usuario = Usuario::findOrFail($id);
+        $usuario = Usuario::where('id_usuario', $id);
         $usuario->delete();
 
-        return redirect('/')->with('success', 'Dados de Cliente removido com sucesso!');
+        return redirect('usuario/show')->with('success', 'Dados de Cliente removido com sucesso!');
     }
 
 
