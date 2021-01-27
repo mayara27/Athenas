@@ -67,4 +67,6 @@ class UsuarioController extends Controller
 
         return redirect('/')->with('success', 'Dados de Cliente removido com sucesso!');
     }
+
+
 }
