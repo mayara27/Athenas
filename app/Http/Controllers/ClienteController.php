@@ -62,14 +62,14 @@ class ClienteController extends Controller
 
     public function edit($id)
     {
-        $cliente = Cliente::where($id);
+        $cliente = Cliente::find($id);
 
         return view('cliente.show', compact('cliente'));
     }
 
     public function update(Request $request, $id)
     {
-        $cliente = Cliente::where($id);
+        $cliente = Cliente::find($id);
 
         $cliente->nome_cliente = $request->nome_cliente;
         $cliente->cpf = $request->cpf_cliente;
@@ -82,7 +82,7 @@ class ClienteController extends Controller
         //método alternativo (atualização em massa)
         // $book->update($request->all());
 
-        return redirect()->route('cliente.show');
+        return redirect('cliente/show')->route('cliente.show');
     }
 
 }

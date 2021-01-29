@@ -22,7 +22,11 @@ class ChamadoController extends Controller
         $chamado->id_cliente = $request->id_cliente;
 
         $chamado->save();
+        return redirect('/');
     }
 
-    
+    public function show(){
+        $chamados = Chamado::all();
+        return view('chamado.show', compact('chamados'));
+    }   
 }

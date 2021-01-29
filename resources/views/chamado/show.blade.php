@@ -176,10 +176,35 @@
        
 
         <div class="container mt-2 ml-15">
-            <div id="layoutSidenav_content">
+            <div id="layoutSidenav_content">    
                 <main>
                     <div class="container-fluid">
-              
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ID</th>
+                                    <th scope="col">Título</th>
+                                    <th scope="col">Status</th>
+                                    <th scope="col">Descrição</th>
+                                    <th scope="col">Data de entrega</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <div class="form-group col-md-6">
+                                    @foreach ($chamados as $chamado)
+                                    <tr>
+                                        <td>{{ $chamado->id_chamado }}</td>
+                                        <td>{{ $chamado->titulo }}</td>
+                                        <td>{{ $chamado->status }}</td>
+                                        <td>{{ $chamado->descricao }}</td>
+                                        <td>{{ $chamado->deadline }}</td>
+                                    </tr>
+                                    @endforeach
+                                </div>
+                            </tbody>
+                        </table>
+                    
+                    <div class="container-fluid">
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
