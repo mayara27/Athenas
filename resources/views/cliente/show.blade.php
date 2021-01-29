@@ -119,6 +119,7 @@
                                 <th scope="col">Matrícula</th>
                                 <th scope="col">Setor</th>
                                 <th scope="col">Excluir?</th>
+                                <th scope="col">Editar?</th>
                             </tr>
                         </thead>
                             <tbody>
@@ -135,8 +136,13 @@
                                                 <button class="btn btn-danger btn-sm" type="submit">Excluir Cliente</button>
                                             </form>
                                         </td>
+                                        <td>
+                                            <form action="{{ route('cliente.edit', $cliente->id_cliente)}}" method="get">
+                                                @csrf
+                                                <button class="btn btn-primary btn-sm" type="submit">Editar Cliente</button>
+                                            </form>
+                                        </td>
                                     </tr>
-                                    
                                     @endforeach
                                 </div>
                             </tbody>

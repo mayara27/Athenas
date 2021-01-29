@@ -60,4 +60,29 @@ class ClienteController extends Controller
         return redirect('cliente/show')->with('success', 'Dados de Cliente removido com sucesso!');
     }
 
+    public function edit($id)
+    {
+        $cliente = Cliente::where($id);
+
+        return view('cliente.show', compact('cliente'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $cliente = Cliente::where($id);
+
+        $cliente->nome_cliente = $request->nome_cliente;
+        $cliente->cpf = $request->cpf_cliente;
+        $cliente->email = $request->email_cliente;
+        $cliente->setor = $request->setor;
+        $cliente->telefone = $request->tel_cliente;
+
+        $cliente->save();
+
+        //método alternativo (atualização em massa)
+        // $book->update($request->all());
+
+        return redirect()->route('cliente.show');
+    }
+
 }
