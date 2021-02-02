@@ -20,7 +20,7 @@ Route::get('cliente/create', 'ClienteController@create')->name('cliente.create')
 Route::post('cliente', 'ClienteController@store');
 Route::delete('cliente/destroy/{id}', 'ClienteController@destroy')->name('cliente.destroy');
 Route::get('cliente/{id}/edit', 'ClienteController@edit')->name('cliente.edit');
-Route::put('cliente/update', 'ClienteController@update');
+Route::put('cliente/{id}/update', 'ClienteController@update')->name('cliente.update');
 
 
 

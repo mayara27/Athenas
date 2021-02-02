@@ -119,7 +119,7 @@
                                 <div class="row">
                                     <div class="col">
                             
-                                        <form   action="{{ url('cliente.update', $cliente->id, $endereco->id) }}" method="POST" >
+                                        <form action="{{ route('cliente.update', $cliente->id_cliente) }}" method="POST">
                                             @csrf
                                             @method('PUT')
                                         <fieldset>
