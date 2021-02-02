@@ -18,8 +18,8 @@ Route::get('cliente/show', 'ClienteController@show')->name('cliente.show');
 Route::get('cliente/create', 'ClienteController@create')->name('cliente.create');
 Route::post('cliente', 'ClienteController@store');
 Route::delete('cliente/destroy/{id}', 'ClienteController@destroy')->name('cliente.destroy');
-Route::get('cliente/{id}/edit', 'ClienteController@edit')->name('cliente.edit');
-Route::get('cliente', 'ClienteController@update');
+Route::get('cliente/{id}/update', 'ClienteController@edit')->name('cliente.edit');
+Route::put('cliente', 'ClienteController@update')->name('cliente.update');
 
 
 

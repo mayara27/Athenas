@@ -21,7 +21,6 @@
 
     <body class="sb-nav-fixed">
         <h1>Inicio</h1>
-
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">Athena's HelpDesk</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -109,102 +108,125 @@
                     </div>
                 </nav>
             </div>
-
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Menu</div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Cliente
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">                                    
-                                    <a class="nav-link" href="{{ url('/cliente/show')}}">Lista clientes</a>
-                                    <a class="nav-link" href="{{ url('/cliente/create')}}">Novo Cliente</a>
-                                </nav>
-                            </div>
-
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Funcionário
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
-                                    <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
-                                </nav>
-                            </div>  
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Chamado
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ url('/chamado/create')}}">Novo Chamado</a>
-                                    <a class="nav-link" href="{{ url('/chamado/show')}}">Todos Chamados</a>
-                                </nav>
-                            </div>
-
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Desenvolvido por:</div>
-                        Diana e Mayara
-                    </div>
-                </nav>
-            </div>
        
 
         <div class="container mt-2 ml-15">
-            <div id="layoutSidenav_content">    
+            <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid">
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">Título</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Descrição</th>
-                                    <th scope="col">Data de entrega</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <div class="form-group col-md-6">
-                                    @foreach ($chamados as $chamado)
-                                    <tr>
-                                        <td>{{ $chamado->id_chamado }}</td>
-                                        <td>{{ $chamado->titulo }}</td>
-                                        <td>{{ $chamado->status }}</td>
-                                        <td>{{ $chamado->descricao }}</td>
-                                        <td>{{ $chamado->deadline }}</td>
-                                    </tr>
-                                    @endforeach
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col">
+                            
+                                        <form   action="{{ route('cliente.update') }}" method="POST" >
+                                            @csrf
+                                            @method('PUT')
+                                        <fieldset>
+                                                <legend > Informações Pesoais  </legend> <br><br>                                   
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="nome">Nome Completo</label>
+                                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
+                                                    </div>
+
+                                                    <div class="form-group col-md-6">
+                                                        <label for="cpf">CPF</label>
+                                                        <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="setor">Setor</label>
+                                                        <select name="setor" id="setor" class="form-control">
+                                                            <option>Recursos Humanos</option>
+                                                            <option>Atendimento</option>
+                                                            <option>Financeiro</option>
+                                                            <option>Desenvolvimento Web</option>
+                                                            <option>Fiscalização</option>
+                                                            <option>Marketing</option>
+                                                            <option>Secretaria</option>
+                                                            <option>Gerencia</option>
+                                                        </select>
+                                                    </div>
+                                                
+                                                    <div class="form-group col-md-6">
+                                                        <label for="telefone_cliente">Telefone</label>
+                                                        <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" >
+                                                    </div>
+                                                </div>    
+                                                
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="email_cliente">Email</label>
+                                                        <input type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
+                                                    </div>
+                                                </div>
+
+                                                </fieldset><br><br>
+
+                                                <fieldset>
+                                                    <legend > Endereço  </legend><br><br>
+                                                        
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="cep">CEP</label>
+                                                                <input type="text" class="form-control" name="cep" id="cep" placeholder="Ex: 11665420 ">
+                                                            </div>
+
+                                                            <div class="form-group col-md-6">
+                                                                <label for="rua">Rua</label>
+                                                                <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="form-row">
+                                                            <div class="form-group col-md-6">
+                                                                <label for="numero">Número</label>
+                                                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
+                                                            </div>
+
+                                                            <div class="form-group col-md-6">
+                                                                <label for="bairro">Bairro</label>
+                                                                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
+                                                            </div>
+                                                        </div>                                     
+
+                                                        <div class="form-row">                            
+                                                            <div class="form-group col-md-6">
+                                                                <label for="cidade">Cidade</label>
+                                                                <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
+                                                            </div>
+
+                                                            <div class="form-group col-md-6">
+                                                                <label for="estado">Estado</label>
+                                                                <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: São Paulo ">
+                                                            </div>
+                                                            
+                                                        </div><br><br>
+                                                </fieldset>
+
+                                            <div class="row mt-5">
+                                                <div class="col-12">
+                                                    <button class="btn btn-primary btn-block" type="submit">Cadastrar</button>
+                                                </div>
+                                            </div>
+                                            <br><br>
+                                            <small id="titulo" class="form-text text-muted" style="text-align: center;">
+                                                Nunca compartilharemos suas Informações com ninguém !
+                                            </small>
+
+                                        </form>
+                                    </div>
                                 </div>
-                            </tbody>
-                        </table>
-                    
-                    <div class="container-fluid">
+                            </div>
+                        </div>
+
+                    <div id="layoutSidenav_content">
+              
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
@@ -247,9 +269,3 @@
         </script>
     </body>
 </html>
-
-
-
-<table class="table table-bordered table-hover" style="width: 98px;">
-    
-</table>
