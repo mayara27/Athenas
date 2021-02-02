@@ -61,14 +61,14 @@ class ClienteController extends Controller
 
     public function edit($id)
     {
-        $cliente = Cliente::where('id_cliente', $id);
-        $endereco = EnderecoCliente::where('id_cliente', $id);
+        $cliente = Cliente::where('id_cliente', $id)->first();
+        $endereco = EnderecoCliente::where('id_cliente', $id)->first();
         return view('cliente.update', compact('cliente', 'endereco'));
     }
 
     public function update(Request $request)
     {
-        $cliente = Cliente::find($request);
+        $cliente = Cliente::find($request->$id);
 
         $cliente->nome_cliente = $request->nome_cliente;
         $cliente->cpf = $request->cpf_cliente;
@@ -90,7 +90,6 @@ class ClienteController extends Controller
   
         $endereco->save();
 
-        return redirect()->to('/');
         return redirect('cliente/show')->route('cliente.show');
     }
 

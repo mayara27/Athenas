@@ -202,7 +202,7 @@
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="estado">Estado</label>
-                                                                <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: São Paulo ">
+                                                                <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: SP ">
                                                             </div>
                                                             
                                                         </div><br><br>

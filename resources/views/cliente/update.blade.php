@@ -119,7 +119,7 @@
                                 <div class="row">
                                     <div class="col">
                             
-                                        <form   action="{{ route('cliente.update') }}" method="POST" >
+                                        <form   action="{{ url('cliente.update', $cliente->id, $endereco->id) }}" method="POST" >
                                             @csrf
                                             @method('PUT')
                                         <fieldset>
@@ -128,12 +128,12 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="nome">Nome Completo</label>
-                                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
+                                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" value="{{ $cliente->nome_cliente }}">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="cpf">CPF</label>
-                                                        <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
+                                                        <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" value="{{ $cliente->cpf }}">
                                                     </div>
                                                 </div>
 
@@ -141,20 +141,20 @@
                                                     <div class="form-group col-md-6">
                                                         <label for="setor">Setor</label>
                                                         <select name="setor" id="setor" class="form-control">
-                                                            <option>Recursos Humanos</option>
-                                                            <option>Atendimento</option>
-                                                            <option>Financeiro</option>
-                                                            <option>Desenvolvimento Web</option>
-                                                            <option>Fiscalização</option>
-                                                            <option>Marketing</option>
-                                                            <option>Secretaria</option>
-                                                            <option>Gerencia</option>
+                                                            <option {{ $cliente->setor == 'Recursos Humanos' ? 'selected' : '' }}>Recursos Humanos</option>
+                                                            <option {{ $cliente->setor == 'Atendimento' ? 'selected' : '' }}>Atendimento</option>
+                                                            <option {{ $cliente->setor == 'Financeiro' ? 'selected' : '' }}>Financeiro</option>
+                                                            <option {{ $cliente->setor == 'Desenvolvimento Web' ? 'selected' : '' }}>Desenvolvimento Web</option>
+                                                            <option {{ $cliente->setor == 'Fiscalização' ? 'selected' : '' }}>Fiscalização</option>
+                                                            <option {{ $cliente->setor == 'Marketing' ? 'selected' : '' }}>Marketing</option>
+                                                            <option {{ $cliente->setor == 'Secretaria' ? 'selected' : '' }}>Secretaria</option>
+                                                            <option {{ $cliente->setor == 'Gerencia' ? 'selected' : '' }}>Gerencia</option>
                                                         </select>
                                                     </div>
                                                 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone_cliente">Telefone</label>
-                                                        <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" >
+                                                        <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" value="{{ $cliente->telefone }}" >
                                                     </div>
                                                 </div>    
                                                 
@@ -162,7 +162,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="email_cliente">Email</label>
-                                                        <input type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
+                                                        <input type="email" class="form-control" name="email_cliente" id="email_cliente" value="{{ $cliente->email }}">
                                                     </div>
                                                 </div>
 
@@ -174,36 +174,36 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="cep">CEP</label>
-                                                                <input type="text" class="form-control" name="cep" id="cep" placeholder="Ex: 11665420 ">
+                                                                <input type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="rua">Rua</label>
-                                                                <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
+                                                                <input type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->Rua }}">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="numero">Número</label>
-                                                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
+                                                                <input type="text" class="form-control" name="numero" id="numero" value="{{ $endereco->num }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="bairro">Bairro</label>
-                                                                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
+                                                                <input type="text" class="form-control" name="bairro" id="bairro" value="{{ $endereco->bairro }}">
                                                             </div>
                                                         </div>                                     
 
                                                         <div class="form-row">                            
                                                             <div class="form-group col-md-6">
                                                                 <label for="cidade">Cidade</label>
-                                                                <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
+                                                                <input type="text" class="form-control"  name="cidade" id="cidade" value="{{ $endereco->cidade }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="estado">Estado</label>
-                                                                <input type="text" class="form-control" name="estado" id="estado" placeholder="Ex: São Paulo ">
+                                                                <input type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
                                                             </div>
                                                             
                                                         </div><br><br>
