@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
+Route::post('chamado/{id}/info', 'ChamadoController@info')->name('chamado.info');
 Route::get('chamado/show', 'ChamadoController@show')->name('chamado.show');
 Route::get('chamado/create', 'ChamadoController@create')->name('chamado.create');
 Route::post('chamado/', 'ChamadoController@store');

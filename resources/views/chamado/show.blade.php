@@ -187,6 +187,8 @@
                                     <th scope="col">Status</th>
                                     <th scope="col">Descrição</th>
                                     <th scope="col">Data de entrega</th>
+                                    <th scope="col"></th>
+                                    <th scope="col"></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -198,6 +200,20 @@
                                         <td>{{ $chamado->status }}</td>
                                         <td>{{ $chamado->descricao }}</td>
                                         <td>{{ $chamado->deadline }}</td>
+                                        <td>
+                                            <form action="{{ route('chamado.info', $chamado->id_chamado) }}" method="POST">
+                                                @csrf
+
+                                                <button class="btn btn-info" type="submit">Descrição</button>
+                                            </form>
+                                        </td>
+                                        <td>
+                                            <form action="{{  route('chamado.info', $chamado->id_chamado) }}" method="POST">
+                                                @csrf
+
+                                                <button class="btn btn-success" type="submit">concluir</button>
+                                            </form>
+                                        </td>
                                     </tr>
                                     @endforeach
                                 </div>

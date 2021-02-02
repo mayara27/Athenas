@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Chamado;
+use App\Cliente;
 use Illuminate\Http\Request;
 
 class ChamadoController extends Controller
@@ -28,5 +29,11 @@ class ChamadoController extends Controller
     public function show(){
         $chamados = Chamado::all();
         return view('chamado.show', compact('chamados'));
-    }   
+    }  
+    
+    public function info(Request $request){
+        $chamado = Chamado::find($request->id);
+        $cliente = Cliente::where('id_cliente', $chamado->id_cliente)->first();
+        return view('chamado.info', compact('chamado', 'cliente'));
+    }
 }
