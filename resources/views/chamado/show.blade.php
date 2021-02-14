@@ -169,27 +169,21 @@
                             <tbody>
                                 <div class="form-group col-md-6">
                                     @foreach ($chamados as $chamado)
-                                    <tr>
-                                        <td>{{ $chamado->id_chamado }}</td>
-                                        <td>{{ $chamado->titulo }}</td>
-                                        <td>{{ $chamado->status }}</td>
-                                        <td>{{ $chamado->descricao }}</td>
-                                        <td>{{ $chamado->deadline }}</td>
-                                        <td>
-                                            <form action="{{ route('chamado.info', $chamado->id_chamado) }}" method="POST">
-                                                @csrf
-
-                                                <button class="btn btn-info" type="submit">Descrição</button>
-                                            </form>
-                                        </td>
-                                        <td>
-                                            <form action="{{  route('chamado.info', $chamado->id_chamado) }}" method="POST">
-                                                @csrf
-
-                                                <button class="btn btn-success" type="submit">concluir</button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                        @if($chamado->status != 'inativo')         
+                                            <tr>
+                                                <td>{{ $chamado->id_chamado }}</td>
+                                                <td>{{ $chamado->titulo }}</td>
+                                                <td>{{ $chamado->status }}</td>
+                                                <td>{{ $chamado->descricao }}</td>
+                                                <td>{{ $chamado->deadline }}</td>
+                                                <td>
+                                                    <form action="{{ route('chamado.info', $chamado->id_chamado) }}" method="POST">
+                                                        @csrf
+                                                        <button class="btn btn-info" type="submit">Descrição</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endif
                                     @endforeach
                                 </div>
                             </tbody>

@@ -24,7 +24,7 @@ class ChamadoController extends Controller
         $chamado->deadline = $request->deadline;
 
         $chamado->save();
-        return redirect('/');
+        return redirect('chamado/show');
     }
 
     public function show(){
@@ -36,5 +36,14 @@ class ChamadoController extends Controller
         $chamado = Chamado::find($request->id);
         $cliente = Cliente::where('id_cliente', $chamado->id_cliente)->first();
         return view('chamado.info', compact('chamado', 'cliente'));
+    }
+
+    public function concluir(Request $request)
+    { 
+        $chamado = Chamado::find($request->id);
+        $chamado->status = 'inativo';
+
+        $chamado->save();
+        return redirect('chamado/show');
     }
 }
