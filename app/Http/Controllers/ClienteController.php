@@ -70,7 +70,7 @@ class ClienteController extends Controller
     {   /* $book->update($request->all());*/
 
         echo  $request->nome_cliente;
-        $cliente = Cliente::where('id_cliente', $request->id)->first();
+        $cliente = Cliente::where('id_cliente', $request->id_cliente)->first();
         echo $cliente;
         $cliente->nome_cliente = $request->nome_cliente;
         $cliente->cpf = $request->cpf_cliente;

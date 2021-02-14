@@ -21,7 +21,6 @@
 
     <body class="sb-nav-fixed">
         <h1>Inicio</h1>
-
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="index.html">Athena's HelpDesk</a>
             <button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button>
@@ -109,76 +108,53 @@
                     </div>
                 </nav>
             </div>
-
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Menu</div>
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Cliente
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">                                    
-                                    <a class="nav-link" href="{{ url('/cliente/show')}}">Lista clientes</a>
-                                    <a class="nav-link" href="{{ url('/cliente/create')}}">Novo Cliente</a>
-                                </nav>
-                            </div>
-
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Funcionário
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
-                                    <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
-                                </nav>
-                            </div>  
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Chamado
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ url('/chamado/create')}}">Novo Chamado</a>
-                                    <a class="nav-link" href="{{ url('/chamado/show')}}">Todos Chamados</a>
-                                </nav>
-                            </div>
-
-                            <div class="sb-sidenav-menu-heading">Addons</div>
-                            <a class="nav-link" href="charts.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                                Charts
-                            </a>
-                            <a class="nav-link" href="tables.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Tables
-                            </a>
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Desenvolvido por:</div>
-                        Diana e Mayara
-                    </div>
-                </nav>
-            </div>
-       
-
         <div class="container mt-2 ml-15">
-            <div id="layoutSidenav_content">    
+            <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid">
+                    <div class="container">
+                        <div id="listagem" class="painelListagem  active" data-tipo="Tabela" >
+                            <div class="ticket-cards col-md-12 no-padding hidden-xs-down">
+                                <div class="card-body row p-b-0">
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="first-card">
+                                        <div class="card">
+                                            <label class="medium">Abertos</label>
+                                            <h2 id="Abertos" class="medium font-26">1</h2>
+                                       
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
+                                        <div class="card">
+                                            
+                                            <label class="medium">Em espera</label>
+                                            <h2 id="Espera" class="medium font-26">0</h2>
+                                          
+                                        </div>
+                                    </div>
+                                    <div id="terceiroCard" class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
+                                        <div class="card">
+                                            <label class="medium">Em atraso</label>
+                                            <h2 id="Atraso" class="medium font-26">1</h2>
+                                           
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
+                                        <div class="card">
+                                            <label class="medium">Encerram hoje</label>
+                                            <h2 id="EncerraHj" class="medium font-26">0</h2>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
+                                        <div class="card">
+                                            <label class="medium">Resolvidos</label>
+                                            <h2 class="medium font-26">0</h2>
+                                        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><br>
                         <table class="table">
                             <thead>
                                 <tr>
@@ -219,8 +195,7 @@
                                 </div>
                             </tbody>
                         </table>
-                    
-                    <div class="container-fluid">
+                    </div>
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
@@ -233,7 +208,7 @@
                                 </div>
                             </div>
                         </footer>
-                    </div>
+                   
                 </main>
             </div>
         </div>
@@ -263,9 +238,3 @@
         </script>
     </body>
 </html>
-
-
-
-<table class="table table-bordered table-hover" style="width: 98px;">
-    
-</table>
