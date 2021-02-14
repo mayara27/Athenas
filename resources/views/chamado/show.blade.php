@@ -114,16 +114,15 @@
                     <div class="container">
                         <div id="listagem" class="painelListagem  active" data-tipo="Tabela" >
                             <div class="ticket-cards col-md-12 no-padding hidden-xs-down">
-                                <div class="card-body row p-b-0">
+                                <div class="card-informatio-body row p-b-0">
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="first-card">
-                                        <div class="card">
+                                        <div class="card-information">
                                             <label class="medium">Abertos</label>
                                             <h2 id="Abertos" class="medium font-26">1</h2>
-                                       
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
-                                        <div class="card">
+                                        <div class="card-information">
                                             
                                             <label class="medium">Em espera</label>
                                             <h2 id="Espera" class="medium font-26">0</h2>
@@ -131,21 +130,21 @@
                                         </div>
                                     </div>
                                     <div id="terceiroCard" class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
-                                        <div class="card">
+                                        <div class="card-information">
                                             <label class="medium">Em atraso</label>
                                             <h2 id="Atraso" class="medium font-26">1</h2>
                                            
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
-                                        <div class="card">
+                                        <div class="card-information">
                                             <label class="medium">Encerram hoje</label>
                                             <h2 id="EncerraHj" class="medium font-26">0</h2>
                                             
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
-                                        <div class="card">
+                                        <div class="card-information">
                                             <label class="medium">Resolvidos</label>
                                             <h2 class="medium font-26">0</h2>
                                         

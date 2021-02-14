@@ -21,6 +21,7 @@ class ChamadoController extends Controller
         $chamado->prioridade = $request->prioridade;
         $chamado->descricao = $request->descricao;
         $chamado->id_cliente = $request->id_cliente;
+        $chamado->deadline = $request->deadline;
 
         $chamado->save();
         return redirect('/');

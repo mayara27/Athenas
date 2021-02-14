@@ -137,14 +137,14 @@
 
                                                 <div class="form-group col-md-6">
                                                     <label for="deadline">Deadline</label>
-                                                    <input type="date" class="form-control" name="deadline">
+                                                    <input type="date" id="deadline" name="deadline"  class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                        <label for="prioridade">Prioridade</label>
-                                                        <input type="range" class="form-control-range" name="prioridade">
+                                                    <label for="prioridade">Prioridade</label>
+                                                    <input type="range" min="0" max="10" step="5" name="prioridade">
                                                 </div>
                                             </div>
 
