@@ -118,7 +118,9 @@
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="first-card">
                                         <div class="card-information">
                                             <label class="medium">Abertos</label>
-                                            <h2 id="Abertos" class="medium font-26">1</h2>
+                                            <h2 id="Abertos" class="medium font-26">
+                                              {{$total}}
+                                            </h2>
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
@@ -132,7 +134,9 @@
                                     <div id="terceiroCard" class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
                                         <div class="card-information">
                                             <label class="medium">Em atraso</label>
-                                            <h2 id="Atraso" class="medium font-26">1</h2>
+                                            <h2 id="Atraso" class="medium font-26">
+                                            X
+                                            </h2>
                                            
                                         </div>
                                     </div>
@@ -146,7 +150,9 @@
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
                                         <div class="card-information">
                                             <label class="medium">Resolvidos</label>
-                                            <h2 class="medium font-26">0</h2>
+                                            <h2 class="medium font-26">
+                                                {{$totalInativo}}
+                                            </h2>
                                         
                                         </div>
                                     </div>

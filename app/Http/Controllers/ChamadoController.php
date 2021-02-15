@@ -29,7 +29,13 @@ class ChamadoController extends Controller
 
     public function show(){
         $chamados = Chamado::all();
-        return view('chamado.show', compact('chamados'));
+        $total = Chamado::where('status','=','ativo')->count();
+        $totalInativo = Chamado::where('status','=','inativo')->count();
+
+        #$hoje = date('Y/m/d');
+        #echo $hoje;
+        #$encerraHoje = Chamado::where('deadline','=',$hoje)->count();
+        return view('chamado.show', compact('chamados','total', 'totalInativo'));
     }  
     
     public function info(Request $request){
