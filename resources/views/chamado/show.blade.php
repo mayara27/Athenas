@@ -158,9 +158,7 @@
                                 <tr>
                                     <th scope="col">ID</th>
                                     <th scope="col">Título</th>
-                                    <th scope="col">Status</th>
-                                    <th scope="col">Descrição</th>
-                                    <th scope="col">Data de entrega</th>
+                                    <th scope="col">Deadline</th>
                                     <th scope="col"></th>
                                     <th scope="col"></th>
                                 </tr>
@@ -172,8 +170,6 @@
                                             <tr>
                                                 <td>{{ $chamado->id_chamado }}</td>
                                                 <td>{{ $chamado->titulo }}</td>
-                                                <td>{{ $chamado->status }}</td>
-                                                <td>{{ $chamado->descricao }}</td>
                                                 <td>{{ $chamado->deadline }}</td>
                                                 <td>
                                                     <form action="{{ route('chamado.info', $chamado->id_chamado) }}" method="POST">
