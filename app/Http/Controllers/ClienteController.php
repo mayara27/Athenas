@@ -68,7 +68,7 @@ class ClienteController extends Controller
 
     public function update(Request $request)
     {   /* $book->update($request->all());*/
-    #dd($request->input());
+        #dd($request->input());
         $cliente =  Cliente::find($request->id_cliente);
         #$cliente = Cliente::where('id_cliente', $request->id_cliente)->first();
         echo $cliente;

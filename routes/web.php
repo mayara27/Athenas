@@ -9,11 +9,14 @@ Route::post('chamado/info/{id}', 'ChamadoController@concluir')->name('chamado.co
 Route::get('chamado/show', 'ChamadoController@show')->name('chamado.show');
 Route::get('chamado/create', 'ChamadoController@create')->name('chamado.create');
 Route::post('chamado/', 'ChamadoController@store');
+Route::put('chamado/{id}/update', 'ChamadoController@update')->name('chamado.update');
 
 Route::get('usuario/show', 'UsuarioController@show')->name('usuario.show');
 Route::get('usuario/create', 'UsuarioController@create')->name('usuario.create');
 Route::post('usuario', 'UsuarioController@store');
 Route::delete('usuario/destroy/{id}', 'UsuarioController@destroy')->name('usuario.destroy');
+Route::get('usuario/{id}/edit', 'UsuarioController@edit')->name('usuario.edit');
+Route::put('usuario/{id}/update', 'UsuarioController@update')->name('usuario.update');
 
 
 Route::get('cliente/show', 'ClienteController@show')->name('cliente.show');

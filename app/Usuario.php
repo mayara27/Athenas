@@ -8,6 +8,7 @@ class Usuario extends Model
 {
     
     public $timestamps = false;
+    protected $primaryKey = 'id_usuario';
     protected $fillable = [    
         
         'nome',

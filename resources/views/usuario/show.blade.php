@@ -139,6 +139,12 @@
                                         <button class="btn btn-danger btn-sm" type="submit">Excluir Usuário</button>
                                     </form>
                                 </td>
+                                <td>
+                                    <form action="{{ route('usuario.edit', $usuario->id_usuario)}}" method="get">
+                                        @csrf
+                                        <button class="btn btn-primary btn-sm" type="submit">Editar</button>
+                                    </form>
+                                </td>
 
                                 </tr>
                                 @endforeach
