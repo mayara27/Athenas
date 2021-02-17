@@ -108,60 +108,31 @@
                     </div>
                 </nav>
             </div>
-       
-
         <div class="container mt-2 ml-15">
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                            <th scope="col">Matrícula</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Cargo</th>
-                            <th scope="col">Telefone</th>
-                            <th scope="col">Excluir?</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <div class="form-group col-md-6">
-                                @foreach ($usuarios as $usuario)
-                                <tr>
-                                <td>{{ $usuario->id_usuario }}</td>
-                                <td>{{ $usuario->nome_usuario }}</td>
-                                <td>{{ $usuario->cargo }} ( {{ $usuario->nivel_acesso }} )</td>
-                                <td>
-                                    <form action="{{ route('usuario.destroy', $usuario->id_usuario)}}" method="post">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button class="btn btn-danger btn-sm" type="submit">Excluir Usuário</button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="{{ route('usuario.edit', $usuario->id_usuario)}}" method="get">
-                                        @csrf
-                                        <button class="btn btn-primary btn-sm" type="submit">Editar</button>
-                                    </form>
-                                </td>
-                                <td>
-                                    <form action="{{ route('usuario.info', $usuario->id_usuario)}}" method="POST">
-                                        @csrf
-                                        <button class="btn btn-primary btn-sm" type="submit">ver</button>
-                                    </form>
-                                </td>
+                    <div class="container">
+                        <p>{{ $usuario->nome_usuario }}</p>
+                        <p>{{ $usuario->cpf }}</p>
+                        <p>{{ $usuario->cargo }}</p>
+                        <p>{{ $usuario->email }}</p>
+                        <p>{{ $usuario->telefone_usuario }}</p>
+                        <p>{{ $usuario->tel_contato_usuario }}</p>
+                        <p>{{ $usuario->login }}</p>
+                        <p>{{ $usuario->filhos_usuario }}</p>
+                        <p>{{ $usuario->nascimento_usuario }}</p>
+                        <p>{{ $usuario->escolaridade }}</p>
+                        <p>{{ $usuario->estado_civil_usuario }}</p>
+                        <p>*****************ENDEREÇO********************</p>
+                        <p>{{ $endereco->rua }}</p>
+                        <p>{{ $endereco->numero }}</p>
+                        <p>{{ $endereco->bairroo }}</p>
+                        <p>{{ $endereco->cep }}</p>
+                        <p>{{ $endereco->cidade }}</p>
+                        <p>{{ $endereco->estado }}</p>
 
-                                </tr>
-                                @endforeach
-                            </div>
-                            <tr>
-                            
-                            </tr>
-                        </tbody>
-                        </table>
-
-                    <div id="layoutSidenav_content">
-              
+                    </div><br>
+                      
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
@@ -174,7 +145,7 @@
                                 </div>
                             </div>
                         </footer>
-                    </div>
+                   
                 </main>
             </div>
         </div>
@@ -187,7 +158,7 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/datatables-demo.js">[</script>
+        <script src="assets/demo/datatables-demo.js"></script>
         <script type="text/javascript">
         	    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
                 $("#layoutSidenav_nav .sb-sidenav a.nav-link").each(function() {

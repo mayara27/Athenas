@@ -14,6 +14,12 @@ class UsuarioController extends Controller
     	return view('usuario.create');
     }
 
+    public function info(Request $request){
+        $usuario = Usuario::find($request->id);
+        $endereco = Endereco::where('id_usuario', $usuario->id_usuario)->first();
+        return view('usuario.info', compact( 'usuario','endereco'));
+    }
+
     public function store(Request $request)
     { 
         $senha = 'user123';
