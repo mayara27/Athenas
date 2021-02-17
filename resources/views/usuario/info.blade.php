@@ -126,7 +126,7 @@
                         <p>*****************ENDEREÇO********************</p>
                         <p>{{ $endereco->rua }}</p>
                         <p>{{ $endereco->numero }}</p>
-                        <p>{{ $endereco->bairroo }}</p>
+                        <p>{{ $endereco->bairro }}</p>
                         <p>{{ $endereco->cep }}</p>
                         <p>{{ $endereco->cidade }}</p>
                         <p>{{ $endereco->estado }}</p>

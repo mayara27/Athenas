@@ -111,49 +111,22 @@
         <div class="container mt-2 ml-15">
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid">
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Matrícula</th>
-                                <th scope="col">Setor</th>
-                                <th scope="col">Excluir?</th>
-                                <th scope="col">Editar?</th>
-                            </tr>
-                        </thead>
-                            <tbody>
-                                <div class="form-group col-md-6">
-                                    @foreach ($clientes as $cliente)
-                                    <tr>
-                                        <td>{{ $cliente->nome_cliente }}</td>
-                                        <td>{{ $cliente->id_cliente }}</td>
-                                        <td>{{ $cliente->setor }}</td>
-                                        <td>
-                                            <form action="{{ route('cliente.destroy', $cliente->id_cliente)}}" method="post">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger btn-sm" type="submit">Excluir Cliente</button>
-                                            </form>
-                                        </td>
-                                        <td>
-                                            <form action="{{ route('cliente.edit', $cliente->id_cliente)}}" method="get">
-                                                @csrf
-                                                <button class="btn btn-primary btn-sm" type="submit">Editar Cliente</button>
-                                            </form>
-                                        </td>
-                                        <td>
-                                    <form action="{{ route('cliente.info', $cliente->id_cliente)}}" method="POST">
-                                        @csrf
-                                        <button class="btn btn-primary btn-sm" type="submit">ver</button>
-                                    </form>
-                                </td>
-                                    </tr>
-                                    @endforeach
-                                </div>
-                            </tbody>
-                        </table>
+                    <div class="container">
+                        <p>{{ $cliente->nome_cliente }}</p>
+                        <p>{{ $cliente->cpf }}</p>
+                        <p>{{ $cliente->setor }}</p>
+                        <p>{{ $cliente->email }}</p>
+                        <p>{{ $cliente->telefone }}</p>
+                        <p>*****************ENDEREÇO********************</p>
+                        <p>{{ $endereco->rua }}</p>
+                        <p>{{ $endereco->numero }}</p>
+                        <p>{{ $endereco->bairro }}</p>
+                        <p>{{ $endereco->cep }}</p>
+                        <p>{{ $endereco->cidade }}</p>
+                        <p>{{ $endereco->estado }}</p>
 
+                    </div><br>
+                      
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
@@ -166,6 +139,7 @@
                                 </div>
                             </div>
                         </footer>
+                   
                 </main>
             </div>
         </div>
@@ -178,7 +152,7 @@
         <script src="assets/demo/chart-bar-demo.js"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
-        <script src="assets/demo/datatables-demo.js">[</script>
+        <script src="assets/demo/datatables-demo.js"></script>
         <script type="text/javascript">
         	    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
                 $("#layoutSidenav_nav .sb-sidenav a.nav-link").each(function() {

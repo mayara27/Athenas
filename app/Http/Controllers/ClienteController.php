@@ -13,6 +13,12 @@ class ClienteController extends Controller
     	return view('cliente.create');
     }
 
+    public function info(Request $request){
+        $cliente = Cliente::find($request->id);
+        $endereco = EnderecoCliente::where('id_cliente', $cliente->id_cliente)->first();
+        return view('cliente.info', compact( 'cliente','endereco'));
+    }
+
     public function store(Request $request)
     {
         $cliente = new Cliente;
