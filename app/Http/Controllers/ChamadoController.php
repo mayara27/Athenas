@@ -32,10 +32,14 @@ class ChamadoController extends Controller
         $total = Chamado::where('status','=','ativo')->count();
         $totalInativo = Chamado::where('status','=','inativo')->count();
 
-        #$hoje = date('Y/m/d');
-        #echo $hoje;
-        #$encerraHoje = Chamado::where('deadline','=',$hoje)->count();
-        return view('chamado.show', compact('chamados','total', 'totalInativo'));
+        $hoje = date('Y/m/d');
+        $encerraHoje = Chamado::where('deadline','=',$hoje)->count();
+
+        $atrasado = Chamado::where('deadline','<',$hoje)->count();
+
+        $concluidos = Chamado::where('status','=','inativo')->count();
+
+        return view('chamado.show', compact('chamados','total', 'totalInativo','encerraHoje','atrasado','concluidos'));
     }  
     
     public function info(Request $request){

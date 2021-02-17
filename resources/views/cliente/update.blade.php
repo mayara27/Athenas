@@ -123,7 +123,13 @@
                                             @csrf
                                             @method('PUT')
                                         <fieldset>
-                                                <legend > Informações Pesoais  </legend> <br><br>                                   
+                                                <legend > Informações Pesoais  </legend> <br><br>    
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <label for="id_cliente">Matrícula do Cliente</label>
+                                                        <input type="text" class="form-control" name="id_cliente" id="id_cliente" value="{{ $cliente->id_cliente }}" readonly >
+                                                    </div>
+                                                </div>                               
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">

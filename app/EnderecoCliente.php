@@ -9,6 +9,8 @@ class EnderecoCliente extends Model
     protected $table = 'enderecos_clientes';
 
     public $timestamps = false;
+    
+    protected $primaryKey = 'id_cliente';
     protected $fillable = [  
         'rua',
         'numero',

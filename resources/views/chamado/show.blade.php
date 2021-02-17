@@ -123,19 +123,11 @@
                                             </h2>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
-                                        <div class="card-information">
-                                            
-                                            <label class="medium">Em espera</label>
-                                            <h2 id="Espera" class="medium font-26">0</h2>
-                                          
-                                        </div>
-                                    </div>
                                     <div id="terceiroCard" class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets">
                                         <div class="card-information">
                                             <label class="medium">Em atraso</label>
                                             <h2 id="Atraso" class="medium font-26">
-                                            X
+                                            {{$atrasado}}
                                             </h2>
                                            
                                         </div>
@@ -143,15 +135,16 @@
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
                                         <div class="card-information">
                                             <label class="medium">Encerram hoje</label>
-                                            <h2 id="EncerraHj" class="medium font-26">0</h2>
-                                            
+                                            <h2 id="EncerraHj" class="medium font-26">
+                                            {{$encerraHoje}}
+                                            </h2>                                            
                                         </div>
                                     </div>
                                     <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
                                         <div class="card-information">
                                             <label class="medium">Resolvidos</label>
                                             <h2 class="medium font-26">
-                                                {{$totalInativo}}
+                                                {{$concluidos}}
                                             </h2>
                                         
                                         </div>

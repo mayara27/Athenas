@@ -68,9 +68,9 @@ class ClienteController extends Controller
 
     public function update(Request $request)
     {   /* $book->update($request->all());*/
-
-        echo  $request->nome_cliente;
-        $cliente = Cliente::where('id_cliente', $request->id_cliente)->first();
+    #dd($request->input());
+        $cliente =  Cliente::find($request->id_cliente);
+        #$cliente = Cliente::where('id_cliente', $request->id_cliente)->first();
         echo $cliente;
         $cliente->nome_cliente = $request->nome_cliente;
         $cliente->cpf = $request->cpf_cliente;
@@ -80,7 +80,7 @@ class ClienteController extends Controller
 
         $cliente->save();
 
-        $endereco = EnderecoCliente::where('id_cliente',$cliente->id_cliente);
+        $endereco = EnderecoCliente::where('id_cliente',$cliente->id_cliente)->first();
        
         $endereco->rua = $request->rua;
         $endereco->num = $request->numero;
@@ -89,10 +89,10 @@ class ClienteController extends Controller
         $endereco->cidade = $request->cidade;
         $endereco->estado = $request->estado;
         $endereco->id_cliente = $cliente->id_cliente;
-  
+        
         $endereco->save();
 
-        return redirect('cliente/show')->route('cliente.show');
+        return redirect()->route('cliente.show');
         
     }
 

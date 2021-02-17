@@ -8,6 +8,7 @@ class Cliente extends Model
 {
 
     public $timestamps = false;
+    protected $primaryKey = 'id_cliente';
     protected $fillable = [    
         'nome',
         'cpf',
