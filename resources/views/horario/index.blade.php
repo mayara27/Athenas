@@ -141,21 +141,19 @@
                             <tbody>
                                 <div class="form-group col-md-6">
                                     @foreach ($usuarios as $usuario)
-                                    @foreach ($horarios as $horario)
-                                        <tr>
-                                            
+                                      @foreach ($horarios as $horario)
+                                         <tr>
+                                              @if ( $usuario->id_usuario == $horario->id_usuario )
                                                 <td>{{ $usuario->id_usuario }}</td>
                                                 <td>{{ $usuario->nome_usuario }}</td>
+                                              
                                         
-                                            
-                                            
                                                 <td>{{ $horario->dia }}</td>
                                                 <td>{{ $horario->hora_entrada }}</td>
                                                 <td>{{ $horario->hora_saida }}</td>
-                                            
-                                        
-                                        </tr>
-                                    @endforeach
+                                              @endif
+                                            </tr>
+                                        @endforeach
                                     @endforeach
                                 </div>
                             </tbody>

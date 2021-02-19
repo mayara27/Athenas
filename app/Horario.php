@@ -12,7 +12,7 @@ class Horario extends Model
     
     protected $primaryKey = 'id';
     protected $fillable = [  
-        'id_cliente',
+        'id_usuario',
         'hora_entrada',
         'hora_saida',
         'dia'

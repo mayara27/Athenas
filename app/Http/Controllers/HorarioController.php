@@ -13,17 +13,10 @@ class HorarioController extends Controller
       $funcionarios = Usuario::all();
       $hoje = date('Y-m-d');
       $dia_atual = Horario::all();
+     
       
-      foreach($dia_atual as $d){
-        $horarios = Horario::where('dia','=', $hoje)->get();
-      }
-
-      foreach($horarios as $h){
-        $usuarios = Usuario::where('id_usuario', '=', $h->id_usuario)->get();
-      }
-
-      #echo $usuarios;
-      #echo $horarios;
+      $horarios = Horario::where('dia','=', $hoje)->get();
+      $usuarios = Usuario::all();
     	return view('horario.index', compact('horarios', 'usuarios'));
     }
 
@@ -35,7 +28,6 @@ class HorarioController extends Controller
         
         foreach ($usuarios as $r) {
             $horarios = Horario::where('id_usuario', '=', $r->id_usuario)->get();
-            echo $r;
         }
             
        return view('horario.index', compact('usuarios', 'horarios'));
