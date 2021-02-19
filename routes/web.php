@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index');
 
+Route::get('horario/index', 'HorarioController@index')->name('horario.index');
+Route::get('horario/search', 'HorarioController@search')->name('horario.search');
+
+
 Route::post('chamado/{id}/info', 'ChamadoController@info')->name('chamado.info');
 Route::post('chamado/info/{id}', 'ChamadoController@concluir')->name('chamado.concluir');
 Route::get('chamado/show', 'ChamadoController@show')->name('chamado.show');

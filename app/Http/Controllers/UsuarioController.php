@@ -49,7 +49,7 @@ class UsuarioController extends Controller
         $endereco->cep = $request->cep;
         $endereco->cidade = $request->cidade;
         $endereco->estado = $request->estado;
-        $endereco->id_usuario = $usuario->id;
+        $endereco->id_usuario = $usuario->id_usuario;
   
         
         $endereco->save();

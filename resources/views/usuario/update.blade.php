@@ -51,9 +51,9 @@
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <div class="sb-sidenav-menu-heading">Core</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
+                            <a class="nav-link" href="{{ url('/horario/index')}}">
+                            
+                                Controle de Ponto
                             </a>
                             <div class="sb-sidenav-menu-heading">Menu</div>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
@@ -242,7 +242,7 @@
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="rua">Rua</label>
-                                                                <input type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->Rua }}">
+                                                                <input type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->ua }}">
                                                             </div>
                                                         </div>
 
