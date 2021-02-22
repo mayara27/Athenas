@@ -142,19 +142,24 @@
                                 <div class="form-group col-md-6">
                                     @foreach ($usuarios as $usuario)
                                       @foreach ($horarios as $horario)
-                                         <tr>
+                                        <tr>
                                               @if ( $usuario->id_usuario == $horario->id_usuario )
                                                 <td>{{ $usuario->id_usuario }}</td>
                                                 <td>{{ $usuario->nome_usuario }}</td>
                                               
-                                        
                                                 <td>{{ $horario->dia }}</td>
                                                 <td>{{ $horario->hora_entrada }}</td>
                                                 <td>{{ $horario->hora_saida }}</td>
                                               @endif
-                                            </tr>
                                         @endforeach
                                     @endforeach
+                                            <td>
+                                                <form action="{{ route('horario.info', $usuario->id_usuario)}}" method="POST">
+                                                    @csrf
+                                                    <button class="btn btn-primary btn-sm" type="submit">ver mais</button>
+                                                </form>
+                                            </td> 
+                                        </tr>  
                                 </div>
                             </tbody>
                         </table>

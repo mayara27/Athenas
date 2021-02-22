@@ -6,6 +6,7 @@ Route::get('/', 'HomeController@index');
 
 Route::get('horario/index', 'HorarioController@index')->name('horario.index');
 Route::get('horario/search', 'HorarioController@search')->name('horario.search');
+Route::post('horario/{id}/info', 'HorarioController@info')->name('horario.info');
 
 
 Route::post('chamado/{id}/info', 'ChamadoController@info')->name('chamado.info');

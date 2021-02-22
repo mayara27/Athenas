@@ -123,6 +123,34 @@
                         <p>{{ $endereco->estado }}</p>
 
                     </div><br>
+                    <table class="table">
+                            <thead>
+                                <tr>
+                                <th scope="col">Matrícula</th>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Data</th>
+                                <th scope="col">Horário de entrada</th>
+                                <th scope="col">Horário de saída</th>
+                                <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <div class="form-group col-md-6">
+                                      @foreach ($horarios as $horario)
+                                        <tr>
+                                            @if ( $usuario->id_usuario == $horario->id_usuario )
+                                                <td>{{ $usuario->id_usuario }}</td>
+                                                <td>{{ $usuario->nome_usuario }}</td>
+                                                
+                                                <td>{{ $horario->dia }}</td>
+                                                <td>{{ $horario->hora_entrada }}</td>
+                                                <td>{{ $horario->hora_saida }}</td>
+                                            @endif
+                                        </tr> 
+                                     @endforeach
+                                </div>
+                            </tbody>
+                        </table>
                       
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
