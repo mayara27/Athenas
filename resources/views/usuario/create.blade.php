@@ -17,7 +17,7 @@
 		    <link rel="stylesheet" href="{{ url('css/estilo.css')}}">
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js" crossorigin="anonymous"></script>
-
+       
 
         <!-- Adicionando Javascript -->
     <script type="text/javascript" >
@@ -63,7 +63,6 @@
 
                     //Preenche os campos com "..." enquanto consulta webservice.
                     document.getElementById('rua').value="...";
-                    document.getElementById('numero').value="...";
                     document.getElementById('bairro').value="...";
                     document.getElementById('cidade').value="...";
                     document.getElementById('uf').value="...";
@@ -388,6 +387,7 @@
         <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
         <script src="assets/demo/datatables-demo.js">[</script>
+        <script src="js/cep.js"> </script>
         <script type="text/javascript">
         	    var path = window.location.href; // because the 'href' property of the DOM element is the absolute path
                 $("#layoutSidenav_nav .sb-sidenav a.nav-link").each(function() {

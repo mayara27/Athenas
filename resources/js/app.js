@@ -21,3 +21,7 @@ require('./bootstrap');
         e.preventDefault();
         $("body").toggleClass("sb-sidenav-toggled");
     });
+
+
+
+    
