@@ -54,7 +54,7 @@ class UsuarioController extends Controller
         
         $endereco->save();
 
-        return redirect()->to('/');
+        return redirect('usuario/show');
     }
 
     public function show(){
