@@ -7,7 +7,10 @@ use App\Usuario;
 use App\Endereco;
 class UsuarioController extends Controller
 {
-   
+    public function __construct()
+	{
+	    $this->middleware('auth');
+	}
 
     public function create()
     {

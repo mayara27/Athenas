@@ -34,7 +34,6 @@ Route::get('cliente/{id}/edit', 'ClienteController@edit')->name('cliente.edit');
 Route::put('cliente/{id}/update', 'ClienteController@update')->name('cliente.update');
 Route::post('cliente/{id}/info', 'ClienteController@info')->name('cliente.info');
 
+Auth::routes();
 
-
-
-
+Route::get('/home', 'HomeController@index')->name('home');
