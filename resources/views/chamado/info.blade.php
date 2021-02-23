@@ -111,23 +111,84 @@
         <div class="container mt-2 ml-15">
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container">
-                        <p>{{ $cliente->nome_cliente }}</p>
-                        <p>{{ $cliente->setor }}</p>
-                        <p>{{ $cliente->telefone }}</p>
-                        <p>{{ $cliente->email }}</p>
-                        <p>{{ $chamado->id_chamado }}</p>
-                        <p>{{ $chamado->titulo }}</p>
-                        <p>{{ $chamado->prioridade }}</p>
-                        <p>{{ $chamado->descricao }}</p>
-                        <p>{{ $chamado->status }}</p>
 
-                        <form action="{{  route('chamado.concluir', $chamado->id_chamado) }}" method="POST">
-                            @csrf
-                            <button class="btn btn-success" type="submit">concluir</button>
-                        </form>
-                    </div><br>
-                      
+                    <div class="page-content page-container" id="page-content">
+                        <div class="padding">
+                            <div class="row container d-flex justify-content-center">
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="card user-card-full">
+                                        <div class="row m-l-0 m-r-0">
+                                            <div class="col-sm-3 d-flex align-items-center d-flex justify-content-center bg-c-lite-green user-profile">
+                                                <div class="card-block text-center text-white">
+                                                    <h6 class="f-w-600">{{ $chamado->id_chamado }}</h6>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="card-block">
+                                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Chamado</h6>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Titulo</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $chamado->titulo }}</h6>
+                                                        </div>
+                                                        <div class="col-sm-6 ">
+                                                            <p class="m-b-10 f-w-600">Prioridade</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $chamado->prioridade }} </h6>
+                                                        </div>
+
+                                                        <div class="col-sm-6 mt-3">
+                                                            <p class="m-b-10 f-w-600">Data</p>
+                                                            <h6 class="text-muted f-w-400">{{ $chamado->deadline }}</h6>
+                                                        </div>
+
+                                                        <div class="col-sm-6 mt-3">
+                                                            <p class="m-b-10 f-w-600">Status</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $chamado->status }} </h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-12">
+                                                            <p class="m-b-10 f-w-600">Descricao</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $chamado->descricao }} </h6>
+                                                        </div>
+                                                    </div>
+
+                                                            <h6 class="m-b-20 p-b-5 b-b-default f-w-600 mt-3">Cliente</h6>
+                                                            <div class="row">
+                                                                <div class="col-sm-6">
+                                                                    <p class="m-b-10 f-w-600">Nome</p>
+                                                                    <h6 class="text-muted f-w-400"> {{ $cliente->nome_cliente }} </h6>
+                                                                </div>
+                                                                <div class="col-sm-6">
+                                                                    <p class="m-b-10 f-w-600">Setor</p>
+                                                                    <h6 class="text-muted f-w-400"> {{ $cliente->setor }} </h6>
+                                                                </div>
+        
+                                                                <div class="col-sm-6 mt-3">
+                                                                    <p class="m-b-10 f-w-600">Telefone</p>
+                                                                    <h6 class="text-muted f-w-400"> {{ $cliente->telefone }} </h6>
+                                                                </div>
+
+                                                                <div class="col-sm-6 mt-3">
+                                                                    <p class="m-b-10 f-w-600">Email</p>
+                                                                    <h6 class="text-muted f-w-400"> {{ $cliente->email }} </h6>
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-5 d-flex justify-content-center">
+                                                                <form action="{{  route('chamado.concluir', $chamado->id_chamado) }}" method="POST">
+                                                                    @csrf
+                                                                    <button class="btn btn-success" type="submit">concluir</button>
+                                                                </form>
+                                                            </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">

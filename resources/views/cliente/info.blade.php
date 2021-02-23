@@ -111,21 +111,88 @@
         <div class="container mt-2 ml-15">
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container">
-                        <p>{{ $cliente->nome_cliente }}</p>
-                        <p>{{ $cliente->cpf }}</p>
-                        <p>{{ $cliente->setor }}</p>
-                        <p>{{ $cliente->email }}</p>
-                        <p>{{ $cliente->telefone }}</p>
-                        <p>*****************ENDEREÇO********************</p>
-                        <p>{{ $endereco->rua }}</p>
-                        <p>{{ $endereco->numero }}</p>
-                        <p>{{ $endereco->bairro }}</p>
-                        <p>{{ $endereco->cep }}</p>
-                        <p>{{ $endereco->cidade }}</p>
-                        <p>{{ $endereco->estado }}</p>
+                        <div class="page-content page-container" id="page-content">
+                            <div class="padding">
+                                <div class="row container d-flex justify-content-center">
+                                    <div class="col-xl-12 col-md-12">
+                                        <div class="card user-card-full">
+                                            <div class="row m-l-0 m-r-0">
+                                                <div class="col-sm-3 d-flex align-items-center d-flex justify-content-center bg-c-lite-green user-profile">
+                                                    <div class="card-block text-center text-white">
+                                                        <h6 class="f-w-600">{{ $cliente->nome_cliente }}</h6>
+                                                        <p>{{ $cliente->setor }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-9">
+                                                    <div class="card-block">
+                                                        <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informações</h6>
+                                                        <div class="row">
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Email</p>
+                                                                <h6 class="text-muted f-w-400">{{ $cliente->email }}</h6>
+                                                            </div>
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Telefone</p>
+                                                                <h6 class="text-muted f-w-400">{{ $cliente->telefone }}</h6>
+                                                            </div>
 
-                    </div><br>
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">CPF</p>
+                                                                <h6 class="text-muted f-w-400">{{ $cliente->cpf }}</h6>
+                                                            </div>
+                                                        </div>
+                                                        <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Endereço</h6>
+                                                        <div class="row mt-3">
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Rua</p>
+                                                                <h6 class="text-muted f-w-400">{{ $endereco->Rua }}</h6>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Numero</p>
+                                                                <h6 class="text-muted f-w-400">{{ $endereco->num }}</h6>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-3">
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Bairro</p>
+                                                                <h6 class="text-muted f-w-400">{{ $endereco->bairro }}</h6>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">CEP</p>
+                                                                <h6 class="text-muted f-w-400">{{ $endereco->cep }}</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row mt-3">
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Cidade</p>
+                                                                <h6 class="text-muted f-w-400">>{{ $endereco->cidade }}</h6>
+                                                            </div>
+
+                                                            <div class="col-sm-6">
+                                                                <p class="m-b-10 f-w-600">Estado</p>
+                                                                <h6 class="text-muted f-w-400"> {{ $endereco->estado }} </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <ul class="social-link list-unstyled m-t-40 m-b-10">
+                                                            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>
+                                                            <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="instagram" data-abc="true"><i class="mdi mdi-instagram feather icon-instagram instagram" aria-hidden="true"></i></a></li>
+                                                        </ul>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <br>
                       
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
