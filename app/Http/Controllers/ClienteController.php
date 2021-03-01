@@ -9,11 +9,6 @@ use App\Chamado;
 class ClienteController extends Controller
 {
 
-    public function __construct()
-	{
-	    $this->middleware('auth');
-	}
-    
     public function create()
     {
     	return view('cliente.create');

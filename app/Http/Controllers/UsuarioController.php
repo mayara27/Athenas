@@ -7,10 +7,10 @@ use App\Usuario;
 use App\Endereco;
 class UsuarioController extends Controller
 {
-    public function __construct()
-	{
-	    $this->middleware('auth:admin');
-	}
+    // public function __construct()
+	// {
+	//     $this->middleware('auth:admin');
+	// }
 
     public function create()
     {
@@ -43,6 +43,13 @@ class UsuarioController extends Controller
         $usuario->cargo = $request->setor;
         
         $usuario->save();
+
+        $user = new User;
+        
+        $user->name = $request->nome;
+        $user->email = $request->email;
+        $user->password = $senha;
+        $user->save();
 
         $endereco = new Endereco;
 

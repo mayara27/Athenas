@@ -2,21 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', 'HomeController@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('horario/index', 'HorarioController@index')->name('horario.index');
-Route::get('horario/search', 'HorarioController@search')->name('horario.search');
-Route::post('horario/{id}/info', 'HorarioController@info')->name('horario.info');
+Route::get('/login', 'LoginController@index')->name('login.index');
+Route::post('/login', 'LoginController@login')->name('login.login');
 
-
-Route::post('chamado/{id}/info', 'ChamadoController@info')->name('chamado.info');
-Route::post('chamado/info/{id}', 'ChamadoController@concluir')->name('chamado.concluir');
-Route::get('chamado/show', 'ChamadoController@show')->name('chamado.show');
-Route::get('chamado/create', 'ChamadoController@create')->name('chamado.create');
-Route::post('chamado/', 'ChamadoController@store');
-Route::put('chamado/{id}/update', 'ChamadoController@update')->name('chamado.update');
+Route::get('logout', 'LoginController@logout')->name('login.logout');
 
 
+Route::middleware(['auth', 'is-admin'])->group(function() {
+    Route::resource('users', 'UserController');
+    
 Route::get('usuario/show', 'UsuarioController@show')->name('usuario.show');
 Route::get('usuario/create', 'UsuarioController@create')->name('usuario.create');
 Route::post('usuario', 'UsuarioController@store');
@@ -24,7 +20,20 @@ Route::delete('usuario/destroy/{id}', 'UsuarioController@destroy')->name('usuari
 Route::get('usuario/{id}/edit', 'UsuarioController@edit')->name('usuario.edit');
 Route::put('usuario/{id}/update', 'UsuarioController@update')->name('usuario.update');
 Route::post('usuario/{id}/info', 'UsuarioController@info')->name('usuario.info');
+});
 
+Route::middleware('auth')->group(function() {
+
+Route::get('horario/index', 'HorarioController@index')->name('horario.index');
+Route::get('horario/search', 'HorarioController@search')->name('horario.search');
+Route::post('horario/{id}/info', 'HorarioController@info')->name('horario.info');
+
+Route::post('chamado/{id}/info', 'ChamadoController@info')->name('chamado.info');
+Route::post('chamado/info/{id}', 'ChamadoController@concluir')->name('chamado.concluir');
+Route::get('chamado/show', 'ChamadoController@show')->name('chamado.show');
+Route::get('chamado/create', 'ChamadoController@create')->name('chamado.create');
+Route::post('chamado/', 'ChamadoController@store');
+Route::put('chamado/{id}/update', 'ChamadoController@update')->name('chamado.update');
 
 Route::get('cliente/show', 'ClienteController@show')->name('cliente.show');
 Route::get('cliente/create', 'ClienteController@create')->name('cliente.create');
@@ -34,13 +43,4 @@ Route::get('cliente/{id}/edit', 'ClienteController@edit')->name('cliente.edit');
 Route::put('cliente/{id}/update', 'ClienteController@update')->name('cliente.update');
 Route::post('cliente/{id}/info', 'ClienteController@info')->name('cliente.info');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::prefix('admin')->group(function() {
-    Route::get('/login','Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('logout/', 'Auth\AdminLoginController@logout')->name('admin.logout');
-    Route::get('/dashboard', 'Auth\AdminController@index')->name('admin.dashboard');
-   }) ;
+});
