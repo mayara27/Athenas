@@ -36,7 +36,7 @@ class ChamadoController extends Controller
         $hoje = date('Y/m/d');
         $encerraHoje = Chamado::where('deadline','=',$hoje)->count();
 
-        $atrasado = Chamado::where('deadline','<',$hoje)->count();
+        $atrasado = Chamado::where('deadline','<',$hoje)->where('status','=','ativo')->count();
 
         $concluidos = Chamado::where('status','=','inativo')->count();
 

@@ -67,18 +67,20 @@
                                     <a class="nav-link" href="{{ url('/cliente/create')}}">Novo Cliente</a>
                                 </nav>
                             </div>
-
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayout" aria-expanded="false" aria-controls="collapseLayout">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Funcionário
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayout" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
-                                    <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
-                                </nav>
-                            </div>  
+                            
+                            @if (Auth::user()->role == 'admin')
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayout" aria-expanded="false" aria-controls="collapseLayout">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Funcionário
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapseLayout" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
+                                        <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
+                                    </nav>
+                                </div> 
+                            @endif 
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Chamado

@@ -68,6 +68,7 @@
                                 </nav>
                             </div>
 
+                            @if (Auth::user()->role == 'admin')
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayout" aria-expanded="false" aria-controls="collapseLayout">
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Funcionário
@@ -78,7 +79,8 @@
                                     <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
                                     <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
                                 </nav>
-                            </div>  
+                            </div> 
+                            @endif 
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Chamado

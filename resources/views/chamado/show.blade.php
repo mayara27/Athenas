@@ -12,6 +12,17 @@
 
         <style type="text/css">
          	@charset "UTF-8";
+             .green{
+                 color: green;
+             }
+
+             .orange{
+                 color: orange;
+             }
+
+             .red{
+                 color: red;
+             }
         </style>
 
 		    <link rel="stylesheet" href="{{ url('css/estilo.css')}}">
@@ -67,18 +78,19 @@
                                     <a class="nav-link" href="{{ url('/cliente/create')}}">Novo Cliente</a>
                                 </nav>
                             </div>
-
-                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayout" aria-expanded="false" aria-controls="collapseLayout">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Funcionário
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayout" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
-                                    <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
-                                </nav>
-                            </div>  
+                            @if (Auth::user()->role == 'admin')
+                                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayout" aria-expanded="false" aria-controls="collapseLayout">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    Funcionário
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapseLayout" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="{{ url('/usuario/show')}}">Lista Funcionários</a>
+                                        <a class="nav-link" href="{{ url('/usuario/create')}}">Novo Funcionário</a>
+                                    </nav>
+                                </div> 
+                            @endif 
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
                                 <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Chamado
@@ -140,7 +152,7 @@
                                             </h2>                                            
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
+                                    {{-- <div class="col-lg-2 col-md-4 col-sm-4 col-6 cardsTickets" id="last-card">
                                         <div class="card-information">
                                             <label class="medium">Resolvidos</label>
                                             <h2 class="medium font-26">
@@ -148,7 +160,7 @@
                                             </h2>
                                         
                                         </div>
-                                    </div>
+                                    </div> --}}
                                 </div>
                             </div>
                         </div>
@@ -159,6 +171,7 @@
                                     <th scope="col">ID</th>
                                     <th scope="col">Título</th>
                                     <th scope="col">Deadline</th>
+                                    <th scope="col">Prioridade</th>
                                     <th scope="col"></th>
                                     <th scope="col"></th>
                                 </tr>
@@ -168,10 +181,27 @@
                                     @foreach ($chamados as $chamado)
                                         @if($chamado->status != 'inativo')         
                                             <tr>
-                                                <td>{{ $chamado->id_chamado }}</td>
-                                                <td>{{ $chamado->titulo }}</td>
-                                                <td>{{ $chamado->deadline }}</td>
+                                                @if ($chamado->prioridade == 0)
+                                                <td class="green">{{ $chamado->id_chamado }}</td>
+                                                <td class="green" >{{ $chamado->titulo }}</td>
+                                                <td class="green" >{{ $chamado->deadline }}</td>
+                                                <td class="green" > Baixa </td>
                                                 <td>
+                                                @else @if($chamado->prioridade == 5)
+                                                    <td class="orange">{{ $chamado->id_chamado }}</td>
+                                                    <td class="orange" >{{ $chamado->titulo }}</td>
+                                                    <td class="orange" >{{ $chamado->deadline }}</td>
+                                                    <td class="orange" > Média </td>
+                                                    <td>
+                                                @else
+                                                    <td class="red">{{ $chamado->id_chamado }}</td>
+                                                    <td class="red" >{{ $chamado->titulo }}</td>
+                                                    <td class="red" >{{ $chamado->deadline }}</td>
+                                                    <td class="red" > Alta </td>
+                                                    <td>
+                                                @endif
+                                                @endif
+                                                    
                                                     <form action="{{ route('chamado.info', $chamado->id_chamado) }}" method="POST">
                                                         @csrf
                                                         <button class="btn btn-info" type="submit">Descrição</button>
