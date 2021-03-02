@@ -108,50 +108,170 @@
                     </div>
                 </nav>
             </div>
-        <div class="container mt-2 ml-15">
+        <div class="container-fluid mt-2 ml-15">
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container">
-                        <p>{{ $usuario->nome_usuario }}</p>
-                        <p>{{ $usuario->cargo }}</p>
-                        <p>{{ $usuario->email }}</p>
-                        <p>*****************ENDEREÇO********************</p>
-                        <p>{{ $endereco->rua }}</p>
-                        <p>{{ $endereco->numero }}</p>
-                        <p>{{ $endereco->bairro }}</p>
-                        <p>{{ $endereco->cidade }}</p>
-                        <p>{{ $endereco->estado }}</p>
+                    <div class="page-content page-container" id="page-content">
+                        <div class="padding">
+                            <div class="row container d-flex justify-content-center">
+                                <div class="col-xl-12 col-md-12">
+                                    <div class="card user-card-full">
+                                        <div class="row m-l-0 m-r-0">
+                                            <div class="col-sm-3 d-flex align-items-center d-flex justify-content-center bg-c-lite-green user-profile">
+                                                <div class="card-block text-center text-white">
+                                                    <h6 class="f-w-600"> {{ $usuario->nome_usuario }} </h6>
+                                                    <p> {{ $usuario->cargo }} </p>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-9">
+                                                <div class="card-block">
+                                                    <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Informações</h6>
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Telefone</p>
+                                                            <h6 class="text-muted f-w-400">{{ $usuario->telefone }}</h6>
+                                                        </div>
 
-                    </div><br>
-                    <table class="table">
-                            <thead>
-                                <tr>
-                                <th scope="col">Matrícula</th>
-                                <th scope="col">Nome</th>
-                                <th scope="col">Data</th>
-                                <th scope="col">Horário de entrada</th>
-                                <th scope="col">Horário de saída</th>
-                                <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <div class="form-group col-md-6">
-                                      @foreach ($horarios as $horario)
-                                        <tr>
-                                            @if ( $usuario->id_usuario == $horario->id_usuario )
-                                                <td>{{ $usuario->id_usuario }}</td>
-                                                <td>{{ $usuario->nome_usuario }}</td>
-                                                
-                                                <td>{{ $horario->dia }}</td>
-                                                <td>{{ $horario->hora_entrada }}</td>
-                                                <td>{{ $horario->hora_saida }}</td>
-                                            @endif
-                                        </tr> 
-                                     @endforeach
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Telefone para Contato</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $usuario->tel_contato_usuario }} </h6>
+                                                        </div>
+                                                    </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">Email</p>
+                                                                <h6 class="text-muted f-w-400">{{ $usuario->email }}</h6>
+                                                            </div>
+
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">CPF</p>
+                                                                <h6 class="text-muted f-w-400">{{ $usuario->cpf }}</h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">Login</p>
+                                                                <h6 class="text-muted f-w-400"> {{ $usuario->login }} </h6>
+                                                            </div>
+
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">Número de Filhos</p>
+                                                                <h6 class="text-muted f-w-400"> {{ $usuario->filhos_usuario }} </h6>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="row">
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">Data de Nascimento</p>
+                                                                <h6 class="text-muted f-w-400"> {{ $usuario->nascimento_usuario }} </h6>
+                                                            </div>
+
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">Escolaridade</p>
+                                                                <h6 class="text-muted f-w-400"> {{ $usuario->escolaridade }} </h6>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-6 mt-3">
+                                                                <p class="m-b-10 f-w-600">Estado Civil</p>
+                                                                <h6 class="text-muted f-w-400"> {{ $usuario->estado_civil_usuario }} </h6>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <h6 class="m-b-20 m-t-40 p-b-5 b-b-default f-w-600">Endereço</h6>
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Rua</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $endereco->Rua }} </h6>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Numero</p>
+                                                            <h6 class="text-muted f-w-400">{{ $endereco->num }}</h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Bairro</p>
+                                                            <h6 class="text-muted f-w-400">{{ $endereco->bairro }}</h6>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">CEP</p>
+                                                            <h6 class="text-muted f-w-400">{{ $endereco->cep }}</h6>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row mt-3">
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Cidade</p>
+                                                            <h6 class="text-muted f-w-400">{{ $endereco->cidade }}</h6>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <p class="m-b-10 f-w-600">Estado</p>
+                                                            <h6 class="text-muted f-w-400"> {{ $endereco->estado }} </h6>
+                                                        </div>
+                                                    </div>
+                                                    <td>
+                                                        <form action="{{ route('users.update', $usuario->id_usuario)}}" method="get">
+                                                            @csrf
+                                                            <button class="btn btn-primary btn-sm" type="submit">Mudar Senha</button>
+                                                        </form>
+                                                    </td>
+                                                    <ul class="social-link list-unstyled m-t-40 m-b-10">
+                                                        <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>
+                                                        <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="instagram" data-abc="true"><i class="mdi mdi-instagram feather icon-instagram instagram" aria-hidden="true"></i></a></li>
+                                                    </ul>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </tbody>
-                        </table>
-                      
+                            </div>
+
+                            
+                    <table class="table">
+                        <thead>
+                            <tr>
+                            <th scope="col">Matrícula</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Horário de entrada</th>
+                            <th scope="col">Horário de saída</th>
+                            <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <div class="form-group col-md-6">
+                                  @foreach ($horarios as $horario)
+                                    <tr>
+                                        @if ( $usuario->id_usuario == $horario->id_usuario )
+                                            <td>{{ $usuario->id_usuario }}</td>
+                                            <td>{{ $usuario->nome_usuario }}</td>
+                                            
+                                            <td>{{ $horario->dia }}</td>
+                                            <td>{{ $horario->hora_entrada }}</td>
+                                            <td>{{ $horario->hora_saida }}</td>
+                                        @endif
+                                    </tr> 
+                                 @endforeach
+                            </div>
+                        </tbody>
+                    </table>
+                
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
                         <footer class="py-4 bg-light mt-auto">
                             <div class="container-fluid">
                                 <div class="d-flex align-items-center justify-content-between small">
