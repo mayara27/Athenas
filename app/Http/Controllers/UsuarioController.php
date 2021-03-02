@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Usuario;
 use App\Endereco;
+use App\User;
+
 class UsuarioController extends Controller
 {
     // public function __construct()
@@ -49,6 +51,7 @@ class UsuarioController extends Controller
         $user->name = $request->nome;
         $user->email = $request->email;
         $user->password = $senha;
+        $user->role = $request->tipo_usuario;
         $user->save();
 
         $endereco = new Endereco;
@@ -88,6 +91,8 @@ class UsuarioController extends Controller
     {
         $usuario = Usuario::where('id_usuario', $id)->first();
         $endereco = Endereco::where('id_usuario', $id)->first();
+        $user = User::where('id', $id)->first();
+
         return view('usuario.update', compact('usuario', 'endereco'));
     }
 

@@ -12,6 +12,8 @@ Route::get('logout', 'LoginController@logout')->name('login.logout');
 
 Route::middleware(['auth', 'is-admin'])->group(function() {
     Route::resource('users', 'UserController');
+    Route::get('users/{id}/edit', 'UserController@edit')->name('user.edit');
+    Route::put('users/{id}/update', 'UserController@update')->name('user.update');
     
 Route::get('usuario/show', 'UsuarioController@show')->name('usuario.show');
 Route::get('usuario/create', 'UsuarioController@create')->name('usuario.create');

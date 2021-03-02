@@ -147,7 +147,7 @@
                                 <td>
                                     <form action="{{ route('usuario.info', $usuario->id_usuario)}}" method="POST">
                                         @csrf
-                                        <button class="btn btn-primary btn-sm" type="submit">ver</button>
+                                        <button class="btn btn-primary btn-sm" type="submit">Ver</button>
                                     </form>
                                 </td>
 

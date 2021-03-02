@@ -217,7 +217,12 @@
                                                             <h6 class="text-muted f-w-400"> {{ $endereco->estado }} </h6>
                                                         </div>
                                                     </div>
-
+                                                    <td>
+                                                        <form action="{{ route('users.update', $usuario->id_usuario)}}" method="get">
+                                                            @csrf
+                                                            <button class="btn btn-primary btn-sm" type="submit">Mudar Senha</button>
+                                                        </form>
+                                                    </td>
                                                     <ul class="social-link list-unstyled m-t-40 m-b-10">
                                                         <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
                                                         <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>

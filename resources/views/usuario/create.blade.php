@@ -271,9 +271,8 @@
                                                     <div class="form-group col-md-4">
                                                         <label for="tipo_usuario">Nível de acesso
                                                         </label><select name="tipo_usuario" id="tipo_usuario" class="form-control">
-                                                            <option>Atendente</option>
-                                                            <option>Supervisor</option>
-                                                            <option>Suporte</option>
+                                                            <option>operador</option>
+                                                            <option>admin</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group col-md-4">
