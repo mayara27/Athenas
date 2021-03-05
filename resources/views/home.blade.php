@@ -16,6 +16,10 @@
 
                     {{ __('You are logged in!') }}
                 </div>
+
+                <div class="workinghny-left-img align-end">
+                   <img src="{{ asset('../../public/imagens/1.png') }}" class="img-responsive"  alt="img" />
+                </div>
             </div>
         </div>
     </div>
