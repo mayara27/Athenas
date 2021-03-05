@@ -141,7 +141,7 @@
 
                                                     <div class="form-group col-md-6">
                                                         <label for="cpf">CPF</label>
-                                                        <input required="required" type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738" value="{{ $usuario->cpf }}">
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required"  type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738" value="{{ $usuario->cpf }}">
                                                     </div>
                                                 </div>
 
@@ -161,12 +161,12 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone">Telefone</label>
-                                                        <input required="required" type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->telefone_usuario }}" >
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->telefone_usuario }}" >
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone2">Telefone para Contato</label>
-                                                        <input required="required" type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->tel_contato_usuario }}">
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->tel_contato_usuario }}">
                                                     </div>
                                                 </div>
 
@@ -239,7 +239,7 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="cep">CEP</label>
-                                                                <input required="required" type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
+                                                                <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
@@ -268,7 +268,7 @@
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="estado">Estado</label>
-                                                                <input required="required" type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
+                                                                <input data-ls-module="charCounter" maxlength="2" placeholder="Ex: SP" required="required" type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
                                                             </div>
                                                             
                                                         </div><br><br>

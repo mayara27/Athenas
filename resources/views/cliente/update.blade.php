@@ -162,7 +162,7 @@
                                                 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone_cliente">Telefone</label>
-                                                        <input required="required" type="text" class="form-control" name="tel_cliente" id="tel_cliente" value="{{ $cliente->telefone }}" >
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="tel_cliente" id="tel_cliente" value="{{ $cliente->telefone }}" >
                                                     </div>
                                                 </div>    
                                                 
@@ -182,7 +182,7 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="cep">CEP</label>
-                                                                <input required="required" type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
+                                                                <input data-ls-module="charCounter" maxlength="8" required="required" data-ls-module="charCounter" maxlength="11" type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
@@ -211,7 +211,7 @@
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="estado">Estado</label>
-                                                                <input required="required" type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
+                                                                <input data-ls-module="charCounter" maxlength="2" placeholder=" Ex: SP" required="required" type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
                                                             </div>
                                                             
                                                         </div><br><br>

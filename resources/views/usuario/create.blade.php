@@ -208,7 +208,7 @@
 
                                                     <div class="form-group col-md-6">
                                                         <label for="cpf">CPF</label>
-                                                        <input required="required" type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738">
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738">
                                                     </div>
                                                 </div>
 
@@ -228,12 +228,12 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone">Telefone</label>
-                                                        <input required="required" type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107 ">
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107 ">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone2">Telefone para Contato</label>
-                                                        <input required="required" type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107 ">
+                                                        <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107 ">
                                                     </div>
                                                 </div>
 
@@ -305,7 +305,7 @@
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
                                                             <label for="cep">CEP</label>
-                                                            <input required="required" name="cep" class="form-control" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="Ex: 11665420 ">
+                                                            <input data-ls-module="charCounter" maxlength="8" required="required" name="cep" class="form-control" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="Ex: 11665420 ">
                                                         </div>
 
                                                         <div class="form-group col-md-6">
@@ -334,7 +334,7 @@
 
                                                         <div class="form-group col-md-6">
                                                             <label for="uf">Estado</label>
-                                                            <input required="required" type="text" class="form-control" name="estado" id="uf" placeholder="Ex: São Paulo ">
+                                                            <input data-ls-module="charCounter" maxlength="2" placeholder="Ex: SP" type="text" class="form-control" name="estado" id="uf" placeholder="Ex: São Paulo ">
                                                         </div>
                                                         
                                                     </div><br><br>
