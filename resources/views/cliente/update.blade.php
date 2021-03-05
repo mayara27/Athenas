@@ -129,26 +129,26 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="id_cliente">Matrícula do Cliente</label>
-                                                        <input type="text" class="form-control" name="id_cliente" id="id_cliente" value="{{ $cliente->id_cliente }}" readonly >
+                                                        <input required="required" type="text" class="form-control" name="id_cliente" id="id_cliente" value="{{ $cliente->id_cliente }}" readonly >
                                                     </div>
                                                 </div>                               
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="nome">Nome Completo</label>
-                                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" value="{{ $cliente->nome_cliente }}">
+                                                        <input required="required" type="text" class="form-control" name="nome_cliente" id="nome_cliente" value="{{ $cliente->nome_cliente }}">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="cpf">CPF</label>
-                                                        <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" value="{{ $cliente->cpf }}">
+                                                        <input required="required" type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" value="{{ $cliente->cpf }}">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="setor">Setor</label>
-                                                        <select name="setor" id="setor" class="form-control">
+                                                        <select required="required" name="setor" id="setor" class="form-control">
                                                             <option {{ $cliente->setor == 'Recursos Humanos' ? 'selected' : '' }}>Recursos Humanos</option>
                                                             <option {{ $cliente->setor == 'Atendimento' ? 'selected' : '' }}>Atendimento</option>
                                                             <option {{ $cliente->setor == 'Financeiro' ? 'selected' : '' }}>Financeiro</option>
@@ -162,7 +162,7 @@
                                                 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone_cliente">Telefone</label>
-                                                        <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" value="{{ $cliente->telefone }}" >
+                                                        <input required="required" type="text" class="form-control" name="tel_cliente" id="tel_cliente" value="{{ $cliente->telefone }}" >
                                                     </div>
                                                 </div>    
                                                 
@@ -170,7 +170,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="email_cliente">Email</label>
-                                                        <input type="email" class="form-control" name="email_cliente" id="email_cliente" value="{{ $cliente->email }}">
+                                                        <input required="required" type="email" class="form-control" name="email_cliente" id="email_cliente" value="{{ $cliente->email }}">
                                                     </div>
                                                 </div>
 
@@ -182,36 +182,36 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="cep">CEP</label>
-                                                                <input type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
+                                                                <input required="required" type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="rua">Rua</label>
-                                                                <input type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->Rua }}">
+                                                                <input required="required" type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->Rua }}">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="numero">Número</label>
-                                                                <input type="text" class="form-control" name="numero" id="numero" value="{{ $endereco->num }}">
+                                                                <input required="required" type="text" class="form-control" name="numero" id="numero" value="{{ $endereco->num }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="bairro">Bairro</label>
-                                                                <input type="text" class="form-control" name="bairro" id="bairro" value="{{ $endereco->bairro }}">
+                                                                <input required="required" type="text" class="form-control" name="bairro" id="bairro" value="{{ $endereco->bairro }}">
                                                             </div>
                                                         </div>                                     
 
                                                         <div class="form-row">                            
                                                             <div class="form-group col-md-6">
                                                                 <label for="cidade">Cidade</label>
-                                                                <input type="text" class="form-control"  name="cidade" id="cidade" value="{{ $endereco->cidade }}">
+                                                                <input required="required" type="text" class="form-control"  name="cidade" id="cidade" value="{{ $endereco->cidade }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="estado">Estado</label>
-                                                                <input type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
+                                                                <input required="required" type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
                                                             </div>
                                                             
                                                         </div><br><br>

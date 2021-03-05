@@ -200,19 +200,19 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="nome">Nome Completo</label>
-                                                        <input type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
+                                                        <input required="required" type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="cpf">CPF</label>
-                                                        <input type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
+                                                        <input required="required" type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="setor">Setor</label>
-                                                        <select name="setor" id="setor" class="form-control">
+                                                        <select required="required" name="setor" id="setor" class="form-control">
                                                             <option>Recursos Humanos</option>
                                                             <option>Atendimento</option>
                                                             <option>Financeiro</option>
@@ -226,7 +226,7 @@
                                                 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone_cliente">Telefone</label>
-                                                        <input type="text" class="form-control" name="tel_cliente" id="tel_cliente" >
+                                                        <input required="required" type="text" class="form-control" name="tel_cliente" id="tel_cliente" >
                                                     </div>
                                                 </div>    
                                                 
@@ -234,7 +234,7 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="email_cliente">Email</label>
-                                                        <input type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
+                                                        <input required="required" type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
                                                     </div>
                                                 </div>
 
@@ -246,36 +246,36 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="cep">CEP</label>
-                                                                <input name="cep" class="form-control" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="Ex: 11665420 ">
+                                                                <input required="required" name="cep" class="form-control" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="Ex: 11665420 ">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="rua">Rua</label>
-                                                                <input type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
+                                                                <input required="required" type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="numero">Número</label>
-                                                                <input type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
+                                                                <input required="required" type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="bairro">Bairro</label>
-                                                                <input type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
+                                                                <input required="required" type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
                                                             </div>
                                                         </div>                                     
 
                                                         <div class="form-row">                            
                                                             <div class="form-group col-md-6">
                                                                 <label for="cidade">Cidade</label>
-                                                                <input type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
+                                                                <input required="required" type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="uf">Estado</label>
-                                                                <input type="text" class="form-control" name="estado" id="uf" placeholder="Ex: SP ">
+                                                                <input required="required" type="text" class="form-control" name="estado" id="uf" placeholder="Ex: SP ">
                                                             </div>
                                                             
                                                         </div><br><br>

@@ -23,7 +23,7 @@ class ClienteController extends Controller
     public function store(Request $request)
     {
         $cliente = new Cliente;
-
+ 
         $cliente->nome_cliente = $request->nome_cliente;
         $cliente->cpf = $request->cpf_cliente;
         $cliente->email = $request->email_cliente;

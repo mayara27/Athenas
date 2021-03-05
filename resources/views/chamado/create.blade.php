@@ -127,33 +127,33 @@
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="titulo">Título Do chamado*</label>
-                                                    <input type="text" class="form-control" name="titulo" placeholder="Ex: Correção erro 404">
+                                                    <input required="required" type="text" class="form-control" name="titulo" placeholder="Ex: Correção erro 404">
                                                 </div>
                                             </div>
                                             
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
                                                     <label for="id_cliente">Mátricula do cliente</label>
-                                                    <input type="text" class="form-control" name="id_cliente" placeholder="Ex: 12314">
+                                                    <input required="required" type="text" class="form-control" name="id_cliente" placeholder="Ex: 12314">
                                                 </div>
 
                                                 <div class="form-group col-md-6">
                                                     <label for="deadline">Deadline</label>
-                                                    <input type="date" id="deadline" name="deadline"  class="form-control">
+                                                    <input required="required" type="date" id="deadline" name="deadline"  class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="prioridade">Prioridade</label>
-                                                    <input type="range" min="0" max="10" step="5" name="prioridade">
+                                                    <input required="required" type="range" min="0" max="10" step="5" name="prioridade">
                                                 </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
                                                     <label for="descricao">Descrição</label>
-                                                    <textarea type="textarea" class="form-control" name="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
+                                                    <textarea required="required" type="textarea" class="form-control" name="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
                                                 </div>        
                                             </div>
 

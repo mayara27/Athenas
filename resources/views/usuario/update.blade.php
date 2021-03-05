@@ -129,31 +129,31 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
                                                         <label for="id_usuario">Matrícula do Cliente</label>
-                                                        <input type="text" class="form-control" name="id_usuario" id="id_usuario" value="{{ $usuario->id_usuario }}" readonly >
+                                                        <input required="required" type="text" class="form-control" name="id_usuario" id="id_usuario" value="{{ $usuario->id_usuario }}" readonly >
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="nome">Nome Completo</label>
-                                                        <input type="text" class="form-control" name="nome" id="nome"  value="{{ $usuario->nome_usuario }}">
+                                                        <input required="required" type="text" class="form-control" name="nome" id="nome"  value="{{ $usuario->nome_usuario }}">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="cpf">CPF</label>
-                                                        <input type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738" value="{{ $usuario->cpf }}">
+                                                        <input required="required" type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738" value="{{ $usuario->cpf }}">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="email">Email</label>
-                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Ex: julia@gmail.com" value="{{ $usuario->email }}">
+                                                        <input required="required" type="email" class="form-control" name="email" id="email" placeholder="Ex: julia@gmail.com" value="{{ $usuario->email }}">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="nascimento">Data de Nascimento</label>
-                                                        <input type="date" class="form-control" name="nascimento" id="nascimento" value="{{ $usuario->nascimento_usuario }}" >
+                                                        <input required="required" type="date" class="form-control" name="nascimento" id="nascimento" value="{{ $usuario->nascimento_usuario }}" >
                                                     </div>
                                                     
                                                 </div>
@@ -161,12 +161,12 @@
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone">Telefone</label>
-                                                        <input type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->telefone_usuario }}" >
+                                                        <input required="required" type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->telefone_usuario }}" >
                                                     </div>
 
                                                     <div class="form-group col-md-6">
                                                         <label for="telefone2">Telefone para Contato</label>
-                                                        <input type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->tel_contato_usuario }}">
+                                                        <input required="required" type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107" value="{{ $usuario->tel_contato_usuario }}">
                                                     </div>
                                                 </div>
 
@@ -174,7 +174,7 @@
                                                 <div class="form-row">                 
                                                     <div class="form-group col-md-4">
                                                             <label for="estado_civil">Estado Civil</label>
-                                                            <select name="estado_civil" id="estado_civil" class="form-control">
+                                                            <select required="required" name="estado_civil" id="estado_civil" class="form-control">
                                                                 <option {{ $usuario->estado_civil == 'Casado(a)' ? 'selected' : '' }}>Casado(a)</option>
                                                                 <option {{ $usuario->estado_civil == 'Solteiro(a)' ? 'selected' : '' }}>Solteiro(a)</option>
                                                                 <option {{ $usuario->estado_civil == 'Divorciado(a)' ? 'selected' : '' }}>Divorciado(a)</option>
@@ -184,7 +184,7 @@
 
                                                     <div class="form-group col-md-4">
                                                         <label for="escolaridade">Escolaridade</label>
-                                                        <select name="escolaridade" id="escolaridade" class="form-control">
+                                                        <select required="required" name="escolaridade" id="escolaridade" class="form-control">
                                                             
                                                                 <option {{ $usuario->escolaridade == 'Analfabeto(a)' ? 'selected' : '' }}>Analfabeto(a)</option>
                                                                 <option {{ $usuario->escolaridade == 'Fundamental Completo' ? 'selected' : '' }}>Fundamental Completo</option>
@@ -198,14 +198,14 @@
 
                                                     <div class="form-group col-md-4">
                                                         <label for="filhos">Número de Filhos</label>
-                                                        <input type="number" class="form-control" name="filhos" id="filhos" value="{{ $usuario->filhos_usuario }}">
+                                                        <input required="required" type="number" class="form-control" name="filhos" id="filhos" value="{{ $usuario->filhos_usuario }}">
                                                     </div>                                    
                                                 </div><br>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
                                                         <label for="tipo_usuario">Nível de acesso
-                                                        </label><select name="tipo_usuario" id="tipo_usuario" class="form-control">
+                                                        </label><select required="required" name="tipo_usuario" id="tipo_usuario" class="form-control">
                                                             <option {{ $usuario->tipo_usuario == 'Atendente' ? 'selected' : '' }}>Atendente</option>
                                                             <option {{ $usuario->tipo_usuario == 'Supervisor' ? 'selected' : '' }}>Supervisor</option>
                                                             <option {{ $usuario->tipo_usuario == 'Suporte' ? 'selected' : '' }}>Suporte</option>
@@ -213,7 +213,7 @@
                                                     </div>
                                                     <div class="form-group col-md-4">
                                                         <label for="setor">Setor</label>
-                                                        <select name="setor" id="setor" class="form-control">
+                                                        <select required="required" name="setor" id="setor" class="form-control">
                                                             <option {{ $usuario->setor == 'Recursos Humanos' ? 'selected' : '' }}>Recursos Humanos</option>
                                                             <option {{ $usuario->setor == 'Atendimento' ? 'selected' : '' }}>Atendimento</option>
                                                             <option {{ $usuario->setor == 'Financeiro' ? 'selected' : '' }}>Financeiro</option>
@@ -227,7 +227,7 @@
 
                                                     <div class="form-group col-md-4">
                                                         <label for="emaillogin">Nome para email</label>
-                                                        <input type="text" class="form-control" name="emaillogin" id="emaillogin" placeholder="marciarhlocaweb" value="{{ $usuario->login }}">
+                                                        <input required="required" type="text" class="form-control" name="emaillogin" id="emaillogin" placeholder="marciarhlocaweb" value="{{ $usuario->login }}">
                                                     </div>
 
                                                 </div><br><br>
@@ -239,36 +239,36 @@
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="cep">CEP</label>
-                                                                <input type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
+                                                                <input required="required" type="text" class="form-control" name="cep" id="cep" value="{{ $endereco->cep }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="rua">Rua</label>
-                                                                <input type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->ua }}">
+                                                                <input required="required" type="text" class="form-control" name="rua" id="rua" value="{{ $endereco->ua }}">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
                                                                 <label for="numero">Número</label>
-                                                                <input type="text" class="form-control" name="numero" id="numero" value="{{ $endereco->num }}">
+                                                                <input required="required" type="text" class="form-control" name="numero" id="numero" value="{{ $endereco->num }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="bairro">Bairro</label>
-                                                                <input type="text" class="form-control" name="bairro" id="bairro" value="{{ $endereco->bairro }}">
+                                                                <input required="required" type="text" class="form-control" name="bairro" id="bairro" value="{{ $endereco->bairro }}">
                                                             </div>
                                                         </div>                                     
 
                                                         <div class="form-row">                            
                                                             <div class="form-group col-md-6">
                                                                 <label for="cidade">Cidade</label>
-                                                                <input type="text" class="form-control"  name="cidade" id="cidade" value="{{ $endereco->cidade }}">
+                                                                <input required="required" type="text" class="form-control"  name="cidade" id="cidade" value="{{ $endereco->cidade }}">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
                                                                 <label for="estado">Estado</label>
-                                                                <input type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
+                                                                <input required="required" type="text" class="form-control" name="estado" id="estado" value="{{ $endereco->estado }}">
                                                             </div>
                                                             
                                                         </div><br><br>
