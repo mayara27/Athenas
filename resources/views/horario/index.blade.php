@@ -165,9 +165,8 @@
                                 </div>
                             </tbody>
                         </table>
-
-
                             
+                        <a class="btn btn-success" href="{{ url('/pdf')}}">Gerar Relatório do dia</a>
 
                     <div id="layoutSidenav_content">
               

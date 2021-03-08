@@ -120,39 +120,41 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
+                                        <legend class="d-flex justify-content-center mb-3">Abrir chamado</legend>
+                                        <p> Campos com <span class="red mb-3"> * </span> são obrigatórios. </p>
                                         <form  action="{{ url('chamado') }}" method="POST" enctype="multipart/form-data">
                                             
                                             @csrf
                                             
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="titulo">Título Do chamado*</label>
+                                                    <label for="titulo">Título Do chamado</label> <span class="red"> * </span>
                                                     <input required="required" type="text" class="form-control" name="titulo" placeholder="Ex: Correção erro 404">
                                                 </div>
                                             </div>
                                             
                                             <div class="form-row">
                                                 <div class="form-group col-md-6">
-                                                    <label for="id_cliente">Mátricula do cliente</label>
+                                                    <label for="id_cliente">Mátricula do cliente</label> <span class="red"> * </span>
                                                     <input required="required" type="text" class="form-control" name="id_cliente" placeholder="Ex: 12314">
                                                 </div>
 
                                                 <div class="form-group col-md-6">
-                                                    <label for="deadline">Deadline</label>
+                                                    <label for="deadline">Deadline</label> <span class="red"> * </span>
                                                     <input required="required" type="date" id="deadline" name="deadline"  class="form-control">
                                                 </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="prioridade">Prioridade</label>
+                                                    <label for="prioridade">Prioridade</label> <span class="red"> * </span>
                                                     <input required="required" type="range" min="0" max="10" step="5" name="prioridade">
                                                 </div>
                                             </div>
 
                                             <div class="form-row">
                                                 <div class="form-group col-md-12">
-                                                    <label for="descricao">Descrição</label>
+                                                    <label for="descricao">Descrição</label> <span class="red"> * </span>
                                                     <textarea required="required" type="textarea" class="form-control" name="descricao" placeholder="Ocorre quando tento entrar no sistema"></textarea>
                                                 </div>        
                                             </div>

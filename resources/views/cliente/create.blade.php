@@ -196,22 +196,22 @@
                                             @csrf
                                         <fieldset>
                                                 <legend > Informações Pesoais  </legend> <br><br>                                   
-
+                                                <p> Campos com <span class="red"> * </span> são obrigatórios. </p>
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
-                                                        <label for="nome">Nome Completo</label>
+                                                        <label for="nome">Nome Completo</label> <span class="red"> * </span>
                                                         <input required="required" type="text" class="form-control" name="nome_cliente" id="nome_cliente" placeholder="Ex: Julia Fernandes">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
-                                                        <label for="cpf">CPF</label>
+                                                        <label for="cpf">CPF</label> <span class="red"> * </span>
                                                         <input required="required" data-ls-module="charCounter" maxlength="11" type="text" class="form-control" name="cpf_cliente" id="cpf_cliente" placeholder="Ex: 4623748738">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
-                                                        <label for="setor">Setor</label>
+                                                        <label for="setor">Setor</label> <span class="red"> * </span>
                                                         <select required="required" name="setor" id="setor" class="form-control">
                                                             <option>Recursos Humanos</option>
                                                             <option>Atendimento</option>
@@ -225,7 +225,7 @@
                                                     </div>
                                                 
                                                     <div class="form-group col-md-6">
-                                                        <label for="telefone_cliente">Telefone</label>
+                                                        <label for="telefone_cliente">Telefone</label> <span class="red"> * </span>
                                                         <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="tel_cliente" placeholder="(12)992120107" id="tel_cliente" >
                                                     </div>
                                                 </div>    
@@ -233,7 +233,7 @@
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-12">
-                                                        <label for="email_cliente">Email</label>
+                                                        <label for="email_cliente">Email</label> <span class="red"> * </span>
                                                         <input required="required" type="email" class="form-control" name="email_cliente" id="email_cliente" placeholder="Ex: julia@gmail.com">
                                                     </div>
                                                 </div>
@@ -245,36 +245,36 @@
                                                         
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
-                                                                <label for="cep">CEP</label>
+                                                                <label for="cep">CEP</label> <span class="red"> * </span>
                                                                 <input required="required" data-ls-module="charCounter" maxlength="8" name="cep" class="form-control" type="text" id="cep" value=""  onblur="pesquisacep(this.value);" placeholder="Ex: 11665420 ">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
-                                                                <label for="rua">Rua</label>
+                                                                <label for="rua">Rua</label> <span class="red"> * </span>
                                                                 <input required="required" type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
                                                             </div>
                                                         </div>
 
                                                         <div class="form-row">
                                                             <div class="form-group col-md-6">
-                                                                <label for="numero">Número</label>
+                                                                <label for="numero">Número</label> <span class="red"> * </span>
                                                                 <input required="required" type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
-                                                                <label for="bairro">Bairro</label>
+                                                                <label for="bairro">Bairro</label> <span class="red"> * </span>
                                                                 <input required="required" type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
                                                             </div>
                                                         </div>                                     
 
                                                         <div class="form-row">                            
                                                             <div class="form-group col-md-6">
-                                                                <label for="cidade">Cidade</label>
+                                                                <label for="cidade">Cidade</label> <span class="red"> * </span>
                                                                 <input required="required" type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
                                                             </div>
 
                                                             <div class="form-group col-md-6">
-                                                                <label for="uf">Estado</label>
+                                                                <label for="uf">Estado</label> <span class="red"> * </span>
                                                                 <input data-ls-module="charCounter" maxlength="2" required="required" type="text" class="form-control" name="estado" id="uf" placeholder="Ex: SP ">
                                                             </div>
                                                             

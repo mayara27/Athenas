@@ -11,12 +11,9 @@
     @foreach ($usuarios as $usuario)
         @foreach ($horarios as $horario)
             @if ( $usuario->id_usuario == $horario->id_usuario )
-                <h5>{{ $usuario->id_usuario }}</h5>
-                <h5>{{ $usuario->nome_usuario }}</h5>
-                
-                <h5>{{ $horario->dia }}</h5>
-                <h5>{{ $horario->hora_entrada }}</h5>
-                <h5>{{ $horario->hora_saida }}</h5>
+                <h5>{{ $usuario->id_usuario }} - {{ $usuario->nome_usuario }}</h5>
+                <h5>Dia: {{ $horario->dia }} - Entrada: {{ $horario->hora_entrada }} - Saida: {{ $horario->hora_saida }}</h5>
+                <hr>
             @endif
         @endforeach
     @endforeach

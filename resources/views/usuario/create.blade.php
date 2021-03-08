@@ -192,34 +192,33 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col">
-                            
                                         <form action="{{url('usuario')}}" method="POST">
                                         
                                         @csrf
 
                                         <fieldset>
                                                 <legend > Informações Pesoais  </legend> <br><br>                                   
-
+                                                <p class="mb-5"> Campos com  <span class="red"> * </span>  são obrigatórios.</p>
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
-                                                        <label for="nome">Nome Completo</label>
+                                                        <label for="nome">Nome Completo</label> <span class="red"> * </span>
                                                         <input required="required" type="text" class="form-control" name="nome" id="nome" placeholder="Ex: Julia Fernandes">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
-                                                        <label for="cpf">CPF</label>
+                                                        <label for="cpf">CPF</label> <span class="red"> * </span>
                                                         <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="cpf" id="cpf" placeholder="Ex: 4623748738">
                                                     </div>
                                                 </div>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
-                                                        <label for="email">Email</label>
+                                                        <label for="email">Email</label> <span class="red"> * </span>
                                                         <input required="required" type="email" class="form-control" name="email" id="email" placeholder="Ex: julia@gmail.com">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
-                                                        <label for="nascimento">Data de Nascimento</label>
+                                                        <label for="nascimento">Data de Nascimento</label> <span class="red"> * </span>
                                                         <input required="required" type="date" class="form-control" name="nascimento" id="nascimento" >
                                                     </div>
                                                     
@@ -227,12 +226,12 @@
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-6">
-                                                        <label for="telefone">Telefone</label>
+                                                        <label for="telefone">Telefone</label> <span class="red"> * </span>
                                                         <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="telefone" id="telefone" placeholder="Ex:(12) 99212-0107 ">
                                                     </div>
 
                                                     <div class="form-group col-md-6">
-                                                        <label for="telefone2">Telefone para Contato</label>
+                                                        <label for="telefone2">Telefone para Contato</label> <span class="red"> * </span>
                                                         <input data-ls-module="charCounter" maxlength="11" required="required" type="text" class="form-control" name="telefone2" id="telefone2" placeholder="Ex:(12) 99212-0107 ">
                                                     </div>
                                                 </div>
@@ -240,7 +239,7 @@
                                                 <br>
                                                 <div class="form-row">                 
                                                     <div class="form-group col-md-4">
-                                                            <label for="estado_civil">Estado Civil</label>
+                                                            <label for="estado_civil">Estado Civil</label> <span class="red"> * </span>
                                                             <select required="required" name="estado_civil" id="estado_civil" class="form-control">
                                                                 <option>Casado(a)</option>
                                                                 <option>Solteiro(a)</option>
@@ -250,7 +249,7 @@
                                                     </div>
 
                                                     <div class="form-group col-md-4">
-                                                        <label for="escolaridade">Escolaridade</label>
+                                                        <label for="escolaridade">Escolaridade</label> <span class="red"> * </span>
                                                         <select required="required" name="escolaridade" id="escolaridade" class="form-control">
                                                             
                                                                 <option>Analfabeto(a)</option>
@@ -264,21 +263,21 @@
                                                     </div>
 
                                                     <div class="form-group col-md-4">
-                                                        <label for="filhos">Número de Filhos</label>
+                                                        <label for="filhos">Número de Filhos</label> <span class="red"> * </span>
                                                         <input required="required" type="number" class="form-control" name="filhos" id="filhos" >
                                                     </div>                                    
                                                 </div><br>
 
                                                 <div class="form-row">
                                                     <div class="form-group col-md-4">
-                                                        <label for="tipo_usuario">Nível de acesso
-                                                        </label><select required="required" name="tipo_usuario" id="tipo_usuario" class="form-control">
+                                                        <label for="tipo_usuario">Nível de acesso</label> <span class="red"> * </span>
+                                                        <select required="required" name="tipo_usuario" id="tipo_usuario" class="form-control">
                                                             <option>operador</option>
                                                             <option>admin</option>
                                                         </select>
                                                     </div>
                                                     <div class="form-group col-md-4">
-                                                        <label for="setor">Setor</label>
+                                                        <label for="setor">Setor</label> <span class="red"> * </span>
                                                         <select required="required" name="setor" id="setor" class="form-control">
                                                             <option>Recursos Humanos</option>
                                                             <option>Atendimento</option>
@@ -292,7 +291,7 @@
                                                     </div>
 
                                                     <div class="form-group col-md-4">
-                                                        <label for="emaillogin">Nome para email</label>
+                                                        <label for="emaillogin">Nome para email</label> <span class="red"> * </span>
                                                         <input required="required" type="text" class="form-control" name="emaillogin" id="emaillogin" placeholder="marciarhlocaweb">
                                                     </div>
 
@@ -304,36 +303,36 @@
                                                     
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
-                                                            <label for="cep">CEP</label>
+                                                            <label for="cep">CEP</label> <span class="red"> * </span>
                                                             <input data-ls-module="charCounter" maxlength="8" required="required" name="cep" class="form-control" type="text" id="cep" value="" size="10" maxlength="9" onblur="pesquisacep(this.value);" placeholder="Ex: 11665420 ">
                                                         </div>
 
                                                         <div class="form-group col-md-6">
-                                                            <label for="rua">Rua</label>
+                                                            <label for="rua">Rua</label> <span class="red"> * </span>
                                                             <input required="required" type="text" class="form-control" name="rua" id="rua" placeholder="Ex: Rua Bahia">
                                                         </div>
                                                     </div>
 
                                                     <div class="form-row">
                                                         <div class="form-group col-md-6">
-                                                            <label for="numero">Número</label>
+                                                            <label for="numero">Número</label> <span class="red"> * </span>
                                                             <input required="required" type="text" class="form-control" name="numero" id="numero" placeholder="Ex: 116 ">
                                                         </div>
 
                                                         <div class="form-group col-md-6">
-                                                            <label for="bairro">Bairro</label>
+                                                            <label for="bairro">Bairro</label> <span class="red"> * </span>
                                                             <input required="required" type="text" class="form-control" name="bairro" id="bairro" placeholder="Ex: Tamandaré">
                                                         </div>
                                                     </div>                                     
 
                                                     <div class="form-row">                            
                                                         <div class="form-group col-md-6">
-                                                            <label for="cidade">Cidade</label>
+                                                            <label for="cidade">Cidade</label> <span class="red"> * </span>
                                                             <input required="required" type="text" class="form-control"  name="cidade" id="cidade" placeholder="Ex: Guarátinguetá ">
                                                         </div>
 
                                                         <div class="form-group col-md-6">
-                                                            <label for="uf">Estado</label>
+                                                            <label for="uf">Estado</label> <span class="red"> * </span>
                                                             <input data-ls-module="charCounter" maxlength="2" placeholder="Ex: SP" type="text" class="form-control" name="estado" id="uf" placeholder="Ex: São Paulo ">
                                                         </div>
                                                         
