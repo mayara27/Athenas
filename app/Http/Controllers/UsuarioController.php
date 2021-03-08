@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Usuario;
 use App\Endereco;
 use App\User;
+use PDF;
 
 class UsuarioController extends Controller
 {
@@ -132,6 +133,5 @@ class UsuarioController extends Controller
         return redirect()->route('usuario.show');
         
     }
-
 
 }
