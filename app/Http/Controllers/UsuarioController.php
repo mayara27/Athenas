@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Usuario;
 use App\Endereco;
 use App\User;
+use App\Horario;
 use PDF;
 
 class UsuarioController extends Controller
@@ -78,7 +79,10 @@ class UsuarioController extends Controller
 
     public function destroy($id)
     {
-      
+        
+        $horario = Horario::where('id_usuario', $id);
+        $horario->delete();
+
         $endereco = Endereco::where('id_usuario',$id);
         $endereco->delete();
 

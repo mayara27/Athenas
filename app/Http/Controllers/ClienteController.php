@@ -40,11 +40,11 @@ class ClienteController extends Controller
         $endereco->cep = $request->cep;
         $endereco->cidade = $request->cidade;
         $endereco->estado = $request->estado;
-        $endereco->id_cliente = $cliente->id;
-  
+        $endereco->id_cliente = $cliente->id_cliente;
+        
         $endereco->save();
 
-        return redirect()->to('/');
+        return redirect()->to('/cliente/show');
     }
 
     public function show(){

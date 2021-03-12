@@ -40,7 +40,7 @@
 						
                         <div class="login-form-content" >
                         <div class="logo">
-                            <h1><a class="brand-logo" href="index.html"><span>Athena's</span> Login </a></h1>
+                            <h1><a class="brand-logo" href="/home"><span>Athena's</span> Login </a></h1>
                             @if(session()->has('msg_error'))
                         <div class="row mt-3 mb-3">
                             <div class="col-12">

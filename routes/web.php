@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('pdf', 'HorarioController@geraPdf');
 Route::post('horario/horarioInfo', 'HorarioController@horarioInfo')->name('horario.horarioInfo');
 
+Route::get('/', 'LoginController@index')->name('login.index');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/login', 'LoginController@index')->name('login.index');
